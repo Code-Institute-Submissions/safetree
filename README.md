@@ -3,6 +3,8 @@ The purpose of this website is to promote an organisation that offers alternativ
 
 A link to the live website is [HERE](https://cjcon90.github.io/safetree/)
 
+---
+
 ## Table of Contents
 - Overview
 - User Stories
@@ -13,11 +15,15 @@ A link to the live website is [HERE](https://cjcon90.github.io/safetree/)
   - Skeleton
   - Surface
 
+---
+
 ## Overview
 
 SafeTree Adventure Therapy is a service offering alternative therapy to vulnerable young people in the community across Ireland.
 
 We are specialised in trauma-informed care, and we create family-focused and goal-oriented experiences in natural environments to build up resilience in young people, improve family functioning and promote long-term positive change.
+
+---
 
 ## User Stories
 
@@ -28,11 +34,15 @@ We are specialised in trauma-informed care, and we create family-focused and goa
 ### Story 3
 >"*I am a parent and I am worried about the recent behavioural changes in my child. I do not want to bring them to a doctor or therapist but want to find something that can help us as a family manage this disruptive behaviour and bring us closer together.*"
 
+---
+
 ## User Experience (UX)
 
 This website will be aimed primarily at professionals working with children or parents.
 
 Whilst the service is aimed at children, it is an organisation of skilled, professional workers completing complex trauma-informed work, so it must appear child-friendly, but yet polished and not 'childish'.
+
+---
 
 ### 1. Strategy
 
@@ -53,6 +63,8 @@ Whilst the service is aimed at children, it is an organisation of skilled, profe
 - Due to the nature of the  service, any visuals used must be anonymous and not containing clearly identifiable children/adults
 - The site should not contain pricing as it should not present as a commercial price focused on profit *and* every programme is unique and thus will be uniquely costed.
 
+---
+
 ### 2. Scope
 
 Considering the strategy of our website and the users' needs as outlined, our website should:
@@ -64,6 +76,7 @@ Considering the strategy of our website and the users' needs as outlined, our we
 - Have clearly visible links for the user to each relevant section of the page
 - be built using best practices in terms of semantic HTML and accessibility.
 
+---
 
 ### 3. Structure
 The website should split into three areas. Considering the purpose of the website, these  areas are of equal focus and priority.
@@ -75,16 +88,20 @@ The website should split into three areas. Considering the purpose of the websit
 	-  Contact details for making a referral to our service should be clearly visible and immediately accessible
 	- An integrated contact form for making direct communication from the page itself
 
+---
+
 ### 4. Skeleton
 
-[Mobile Wireframe](https://wireframe.cc/pro/pp/9b32089f7389693#4eskckkd)
-[Tablet Wireframe](https://wireframe.cc/pro/pp/9b32089f7389693#s1exq272)
-[Desktop Wireframe](https://wireframe.cc/pro/pp/9b32089f7389693#pvh1r37l)
+- [Mobile Wireframe](https://wireframe.cc/pro/pp/9b32089f7389693#4eskckkd)
+- [Tablet Wireframe](https://wireframe.cc/pro/pp/9b32089f7389693#s1exq272)
+- [Desktop Wireframe](https://wireframe.cc/pro/pp/9b32089f7389693#pvh1r37l)
 
 The website will be organised into the three sections above within a single scroll-able page.
 - A single page design works best, as the it will allow users the best opportunity to take in  each section of content.
 	- This is particularly beneficial for first time visitors as the information and visual sections both complement each other in terms of content.
 - The navigation links will allow users to jump to any particular section of the page, particularly for those who know of our service and simply want to make contact.
+
+---
 
 ### 5. Surface
 
@@ -104,8 +121,7 @@ For the paragraph font I chose ['Lato' by  Łukasz Dziedzic](https://fonts.googl
 
 ![COLOR SCHEME](https://i.imgur.com/OgeRgeV.png)
 
-
-
+---
 
 
 
