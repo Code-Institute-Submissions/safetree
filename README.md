@@ -17,6 +17,9 @@ A link to the live website is [HERE](https://cjcon90.github.io/safetree/)
   - Skeleton
   - Surface
 - Technologies Used
+- Bugs
+- Testing
+- Credits
 
 ---
 
@@ -138,6 +141,14 @@ For the paragraph font I chose ['Lato' by Łukasz Dziedzic](https://fonts.google
 
 ---
 
+#### Animation
+
+Considering the importance of visuals for this website, I implemented animations into the initial page load.
+
+The navbar animation is likened to the 'opening of a book' to create a more immersive experience on entry to the website - initially prioritising the *SafeTree* logo and  title before bringing the hero image info primary focus.
+
+---
+
 ## Technologies Used
 
 ### Languages
@@ -153,18 +164,57 @@ For the paragraph font I chose ['Lato' by Łukasz Dziedzic](https://fonts.google
 	- Used to import the social media link icons for the footer section
 1. [Flaticon](https://www.flaticon.com/)
 	- Used to import the main SafeTree icon, [designed by Freepik](https://www.flaticon.com/free-icon/tree_785202?term=tree&page=1&position=15)
-1. [Git](https://git-scm.com/)
-	- Used for version control to save changes and store version history
-1. [Github](https://github.com/)
-	- Used to store version history online and publish site to Github pages
-1. [GIMP](https://www.gimp.org/)
-	- Used for photo editing
 1. [Wireframe.cc](https://wireframe.cc/)
 	- Used for creating wireframes formobile, tablet and desktop
 1. [Canva](https://www.canva.com/)
 	- Used for creating an [original design](https://www.canva.com/design/DAEMAKjwqWA/v1I9xqR00DFEtustp3z0tA/view?utm_content=DAEMAKjwqWA&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton) for SafeTree logo and primary font
 1. [SVG Optimizer](https://petercollingridge.appspot.com/svg-optimiser)
 	- For minimizing SVG path to for use in HTML
+1. [cwebp](https://developers.google.com/speed/webp/docs/cwebp)
+	- For batch converting images to webp format using Linux terminal
+1. [ImageMagick](https://imagemagick.org/)
+	- For batch resizing images using Linux terminal
 
+---
+
+## Bugs
+
+**Bug:** Scrolling on mobile was laggy due to large gallery image sizes.
+
+**Fix:** Used *cwebp* and *ImageMagick* to create loops in bash terminal to optimise all images for website.
+Large resize loop:
+`for f in * ; do convert $f -scale 30% lg/$f ; done`
+Medium resize loop:
+`for f in * ; do convert $f -scale 20% md/$f ; done`
+Small resize loop:
+`for f in * ; do convert $f -scale 10% sm/$f ; done`
+Batch convert files to .webp in each new directory:
+`for i in {1..20}; do cwebp -q 100 photo-"${i}".jpg -o photo-"${i}".webp; done`
+
+---
+
+**Bug:** If page was refreshed while user on #about, #gallery or #contact - the navbar animation would take up the whole screen despite not being at the top of the page.
+
+**Fix:** I altered the animation to make the navbar begin with absolute positioning and then switch to fixed once it had reduced to it's regular size.
+
+```css
+@keyframes navbar-start {
+  0% {
+    height: 100vh;
+    position: absolute;
+  }
+  99% {
+    position: absolute;
+  }
+  100% {
+    height: 10vh;
+    position: fixed;
+  }
+}
+```
+
+---
+
+## Testing
 
 
