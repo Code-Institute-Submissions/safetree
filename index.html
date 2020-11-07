@@ -16,15 +16,13 @@
   <body>
     <header id="header">
       <nav>
-        <a href="#header" id="logo-link"
-          ><div id="logo-box">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="logo-svg">
-              <path
-                d="M394.2 119.5c-4.5-31.4-19.6-60.2-43-82C325.2 13.3 291.4 0 256 0c-35.4 0-69.2 13.3-95.1 37.4 -23.4 21.8-38.5 50.7-43 82 -50.5 22-83.8 72.3-83.8 128 0 77 62.6 139.6 139.6 139.6 23.7 0 46.8-6 67.3-17.3V512h30V369.7c20.5 11.3 43.6 17.3 67.3 17.3 77 0 139.6-62.6 139.6-139.6C477.9 191.8 444.6 141.5 394.2 119.5zM338.3 357c-24.5 0-48.1-8.2-67.3-23.1v-91.7l67.3-35.4 -14-26.6 -53.3 28V149.2h-30v125.5l-53.3-28 -14 26.6 67.3 35.4v25.3c-19.2 15-42.8 23.1-67.3 23.1 -60.4 0-109.6-49.2-109.6-109.6 0-46.2 29.2-87.7 72.7-103.2l9.2-3.3 0.7-9.7c2.1-27.5 14.4-53 34.6-71.8C201.7 40.4 228.2 30 256 30s54.3 10.4 74.7 29.4c20.2 18.9 32.5 44.4 34.6 71.8l0.7 9.7 9.2 3.3c43.5 15.5 72.7 57 72.7 103.2C447.9 307.9 398.8 357 338.3 357z"
-              />
-              <!-- <path> taken from safetree-logo.svg file in assets/img/ -->
-            </svg>
-          </div>
+        <a href="#header" id="logo-link" aria-label="Home">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="logo-svg">
+            <path
+              d="M394.2 119.5c-4.5-31.4-19.6-60.2-43-82C325.2 13.3 291.4 0 256 0c-35.4 0-69.2 13.3-95.1 37.4 -23.4 21.8-38.5 50.7-43 82 -50.5 22-83.8 72.3-83.8 128 0 77 62.6 139.6 139.6 139.6 23.7 0 46.8-6 67.3-17.3V512h30V369.7c20.5 11.3 43.6 17.3 67.3 17.3 77 0 139.6-62.6 139.6-139.6C477.9 191.8 444.6 141.5 394.2 119.5zM338.3 357c-24.5 0-48.1-8.2-67.3-23.1v-91.7l67.3-35.4 -14-26.6 -53.3 28V149.2h-30v125.5l-53.3-28 -14 26.6 67.3 35.4v25.3c-19.2 15-42.8 23.1-67.3 23.1 -60.4 0-109.6-49.2-109.6-109.6 0-46.2 29.2-87.7 72.7-103.2l9.2-3.3 0.7-9.7c2.1-27.5 14.4-53 34.6-71.8C201.7 40.4 228.2 30 256 30s54.3 10.4 74.7 29.4c20.2 18.9 32.5 44.4 34.6 71.8l0.7 9.7 9.2 3.3c43.5 15.5 72.7 57 72.7 103.2C447.9 307.9 398.8 357 338.3 357z"
+            />
+            <!-- <path> taken from safetree-logo.svg file in assets/img/ -->
+          </svg>
         </a>
         <div id="nav-links">
           <ul id="nav-list">
@@ -109,62 +107,52 @@
         <div id="img-gallery">
           <!-- picture and srcset, credit to: https://css-tricks.com/responsive-images-css/ -->
           <picture id="photo-1">
-            <source srcset="assets/img/photos/lg/photo-3.webp" media="(min-width: 2000px)" />
-            <!-- Size for extra large displays -->
-            <source srcset="assets/img/photos/md/photo-3.webp" media="(min-width: 1400px)" />
+            <source srcset="assets/img/photos/lg/photo-3.webp" media="(min-width: 1400px)" />
             <!-- Size for large displays -->
-            <source srcset="assets/img/photos/sm/photo-3.webp" media="(min-width: 768px)" />
+            <source srcset="assets/img/photos/md/photo-3.webp" media="(min-width: 768px)" />
             <!-- Size for medium displays -->
-            <img src="assets/img/photos/xs/photo-3.webp" alt="Rocks balanced in order size" class="gallery-img" />
+            <img src="assets/img/photos/sm/photo-3.webp" alt="Rocks balanced in order size" class="gallery-img" />
             <!-- Default size -->
           </picture>
           <picture id="photo-2">
-            <source srcset="assets/img/photos/lg/photo-17.webp" media="(min-width: 2000px)" />
-            <source srcset="assets/img/photos/md/photo-17.webp" media="(min-width: 1400px)" />
-            <source srcset="assets/img/photos/sm/photo-17.webp" media="(min-width: 768px)" />
-            <img src="assets/img/photos/xs/photo-17.webp" alt="Child hiding behind mossy log" class="gallery-img" />
+            <source srcset="assets/img/photos/lg/photo-17.webp" media="(min-width: 1400px)" />
+            <source srcset="assets/img/photos/md/photo-17.webp" media="(min-width: 768px)" />
+            <img src="assets/img/photos/sm/photo-17.webp" alt="Child hiding behind mossy log" class="gallery-img" />
           </picture>
           <picture id="photo-3">
-            <source srcset="assets/img/photos/lg/photo-13.webp" media="(min-width: 2000px)" />
-            <source srcset="assets/img/photos/md/photo-13.webp" media="(min-width: 1400px)" />
-            <source srcset="assets/img/photos/sm/photo-13.webp" media="(min-width: 768px)" />
-            <img src="assets/img/photos/xs/photo-13.webp" alt="Woman sitting with two children on a bench" class="gallery-img" />
+            <source srcset="assets/img/photos/lg/photo-13.webp" media="(min-width: 1400px)" />
+            <source srcset="assets/img/photos/md/photo-13.webp" media="(min-width: 768px)" />
+            <img src="assets/img/photos/sm/photo-13.webp" alt="Woman sitting with two children on a bench" class="gallery-img" />
           </picture>
           <picture id="photo-4">
-            <source srcset="assets/img/photos/lg/photo-11.webp" media="(min-width: 2000px)" />
-            <source srcset="assets/img/photos/md/photo-11.webp" media="(min-width: 1400px)" />
-            <source srcset="assets/img/photos/sm/photo-11.webp" media="(min-width: 768px)" />
-            <img src="assets/img/photos/xs/photo-11.webp" alt="Tent pitched in a sunny wood" class="gallery-img" />
+            <source srcset="assets/img/photos/lg/photo-11.webp" media="(min-width: 1400px)" />
+            <source srcset="assets/img/photos/md/photo-11.webp" media="(min-width: 768px)" />
+            <img src="assets/img/photos/sm/photo-11.webp" alt="Tent pitched in a sunny wood" class="gallery-img" />
           </picture>
           <picture id="photo-5">
-            <source srcset="assets/img/photos/lg/photo-6.webp" media="(min-width: 2000px)" />
-            <source srcset="assets/img/photos/md/photo-6.webp" media="(min-width: 1400px)" />
-            <source srcset="assets/img/photos/sm/photo-6.webp" media="(min-width: 768px)" />
-            <img src="assets/img/photos/xs/photo-6.webp" alt="A lit campfire" class="gallery-img" />
+            <source srcset="assets/img/photos/lg/photo-6.webp" media="(min-width: 1400px)" />
+            <source srcset="assets/img/photos/md/photo-6.webp" media="(min-width: 768px)" />
+            <img src="assets/img/photos/sm/photo-6.webp" alt="A lit campfire" class="gallery-img" />
           </picture>
           <picture id="photo-6">
-            <source srcset="assets/img/photos/lg/photo-4.webp" media="(min-width: 2000px)" />
-            <source srcset="assets/img/photos/md/photo-4.webp" media="(min-width: 1400px)" />
-            <source srcset="assets/img/photos/sm/photo-4.webp" media="(min-width: 768px)" />
-            <img src="assets/img/photos/xs/photo-4.webp" alt="A rock in the shape of a heart with the word 'happy' on it" class="gallery-img" />
+            <source srcset="assets/img/photos/lg/photo-4.webp" media="(min-width: 1400px)" />
+            <source srcset="assets/img/photos/md/photo-4.webp" media="(min-width: 768px)" />
+            <img src="assets/img/photos/sm/photo-4.webp" alt="A rock in the shape of a heart with the word 'happy' on it" class="gallery-img" />
           </picture>
           <picture id="photo-7">
-            <source srcset="assets/img/photos/lg/photo-16.webp" media="(min-width: 2000px)" />
-            <source srcset="assets/img/photos/md/photo-16.webp" media="(min-width: 1400px)" />
-            <source srcset="assets/img/photos/sm/photo-16.webp" media="(min-width: 768px)" />
-            <img src="assets/img/photos/xs/photo-16.webp" alt="A hand carving a piece of wood with a pen knife" class="gallery-img" />
+            <source srcset="assets/img/photos/lg/photo-16.webp" media="(min-width: 1400px)" />
+            <source srcset="assets/img/photos/md/photo-16.webp" media="(min-width: 768px)" />
+            <img src="assets/img/photos/sm/photo-16.webp" alt="A hand carving a piece of wood with a pen knife" class="gallery-img" />
           </picture>
           <picture id="photo-8">
-            <source srcset="assets/img/photos/lg/photo-18.webp" media="(min-width: 2000px)" />
-            <source srcset="assets/img/photos/md/photo-18.webp" media="(min-width: 1400px)" />
-            <source srcset="assets/img/photos/sm/photo-18.webp" media="(min-width: 768px)" />
-            <img src="assets/img/photos/xs/photo-18.webp" alt="A raft sailing down a river" class="gallery-img" />
+            <source srcset="assets/img/photos/lg/photo-18.webp" media="(min-width: 1400px)" />
+            <source srcset="assets/img/photos/md/photo-18.webp" media="(min-width: 768px)" />
+            <img src="assets/img/photos/sm/photo-18.webp" alt="A raft sailing down a river" class="gallery-img" />
           </picture>
           <picture id="photo-9">
-            <source srcset="assets/img/photos/lg/photo-10.webp" media="(min-width: 2000px)" />
-            <source srcset="assets/img/photos/md/photo-10.webp" media="(min-width: 1400px)" />
-            <source srcset="assets/img/photos/sm/photo-10.webp" media="(min-width: 768px)" />
-            <img src="assets/img/photos/xs/photo-10.webp" alt="A girl standing by a lake" class="gallery-img" />
+            <source srcset="assets/img/photos/lg/photo-10.webp" media="(min-width: 1400px)" />
+            <source srcset="assets/img/photos/md/photo-10.webp" media="(min-width: 768px)" />
+            <img src="assets/img/photos/sm/photo-10.webp" alt="A girl standing by a lake" class="gallery-img" />
           </picture>
         </div>
         <!-- ==== GALLERY END ==== -->
