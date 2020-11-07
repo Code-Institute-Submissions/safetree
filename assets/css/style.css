@@ -1,4 +1,4 @@
-/* ===== DEFINE FONTS ===== */
+/* ======== DEFINE FONTS ======== */
 
 @font-face {
   font-family: Norwester;
@@ -13,7 +13,7 @@ html {
   /* Original inspiration for this from Jonas Schmedtmann CSS course on Udemy */
 }
 
-/*  ===== CSS BASE / RESET ===== */
+/*  ======== CSS BASE / RESET ======== */
 
 * {
   margin: 0;
@@ -26,7 +26,7 @@ body {
   background-color: var(--color-white);
 }
 
-/* ===== DEFINE COLOR VARIABLES ===== */
+/* ======== DEFINE COLOR VARIABLES ======== */
 :root {
   --color-primary: rgb(32, 80, 60);
   --color-primary-fade: rgba(41, 92, 71, 0.7); /* For title in hero image */
@@ -34,7 +34,7 @@ body {
   --color-white: #f8f8f8;
 }
 
-/* ===== NAVBAR ===== */
+/* ======== NAVBAR ======== */
 
 nav {
   position: fixed;
@@ -99,7 +99,7 @@ nav {
   fill: var(--color-secondary);
 }
 
-/* ===== HEADER ===== */
+/* ======== HEADER ======== */
 
 header {
   position: relative;
@@ -140,7 +140,7 @@ header {
   color: var(--color-white);
 }
 
-/* ==== TYPOGRAPHY / HEADINGS ==== */
+/* ======= TYPOGRAPHY / HEADINGS ======= */
 
 .heading {
   font-family: "Norwester", sans-serif;
@@ -181,7 +181,7 @@ header {
   transform: translateY(-0.75rem);
 }
 
-/* ==== ABOUT SECTION ==== */
+/* ======= ABOUT SECTION ======= */
 
 .about-heading {
   font-size: 3rem;
@@ -231,7 +231,7 @@ header {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
 }
 
-/* ==== GALLERY SECTION ==== */
+/* ======= GALLERY SECTION ======= */
 
 #img-gallery {
   display: grid;
@@ -296,9 +296,9 @@ header {
   grid-row: 18/22;
 }
 
-/* ==== CONTACT SECTION ==== */
+/* ======= CONTACT SECTION ======= */
 
-/* ==== CONTACT FORM ==== */
+/* ======= CONTACT FORM ======= */
 
 #contact-form {
   display: flex;
@@ -369,7 +369,7 @@ option[value=""][disabled] {
   border: 0.3rem solid var(--color-white);
 }
 
-/* ==== CONTACT DETAILS SECTION ==== */
+/* ======= CONTACT DETAILS SECTION ======= */
 
 #contact-details {
   width: 95%;
@@ -410,4 +410,62 @@ option[value=""][disabled] {
 .contact-text p {
   color: var(--color-white);
   overflow-wrap: break-word;
+}
+
+footer {
+  background-color: var(--color-primary);
+  padding: 1rem 1rem;
+}
+
+#footer-social {
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, min-content);
+  place-items: center;
+  width: 75%;
+}
+
+#footer-social p {
+  grid-column: 1/5;
+  font-size: 1.8rem;
+  font-family: "Lato", sans-serif;
+  color: var(--color-white);
+  margin: 1rem auto;
+}
+#footer-social p span {
+  font-size: 2rem;
+  font-family: "Norwester", sans-serif;
+  color: var(--color-secondary);
+}
+
+.social-icon {
+  font-size: 4rem;
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+#footer-credit {
+  font-size: 1.2rem;
+  font-family: "Lato", sans-serif;
+  color: white;
+  padding: 0.25rem 0;
+}
+#footer-credit p:not(:last-child) {
+  margin: 1rem 0;
+}
+
+.credit-link {
+  text-decoration: none;
+  outline: none;
+}
+.credit-link:link,
+.credit-link:visited {
+  color: var(--color-secondary);
+}
+.credit-link:focus,
+.credit-link:active {
+  text-decoration: underline;
+  font-style: italic;
+  font-size: 1.3rem;
 }
