@@ -29,7 +29,7 @@ body {
 :root {
   --color-primary: rgb(41, 92, 71);
   --color-primary-fade: rgba(41, 92, 71, 0.7); /* For title in hero image */
-  --color-secondary: rgb(246, 176, 64);
+  --color-secondary: #f6b040;
   --color-white: #f8f8f8;
 }
 
@@ -131,9 +131,9 @@ header {
 }
 
 .section-heading {
-  font-size: 4rem;
+  font-size: 3.75rem;
   padding: 10rem 0 5rem 0;
-  margin-top: -5rem;
+  margin-top: -5rem; /* to offset hashtag link location so it is not covered by navbar - https://css-tricks.com/hash-tag-links-padding/ */
   color: var(--color-primary);
 }
 
@@ -142,10 +142,25 @@ header {
   content: "";
   display: inline-block;
   height: 0.3rem;
-  width: 5rem;
+  width: 4rem;
   margin: 0 1rem;
   background-color: var(--color-secondary);
   transform: translateY(-1.5rem);
+}
+
+.contact-heading {
+  color: var(--color-secondary);
+  font-size: 2rem;
+}
+.contact-heading::before,
+.contact-heading::after {
+  content: "";
+  display: inline-block;
+  height: 0.2rem;
+  width: 3rem;
+  margin: 0 1rem;
+  background-color: var(--color-white);
+  transform: translateY(-0.75rem);
 }
 
 /* ==== ABOUT SECTION ==== */
@@ -160,10 +175,14 @@ header {
   display: flex;
   flex-direction: column;
   background-color: var(--color-primary);
-  width: 90%;
+  width: 95%;
+  min-width: 320px;
   margin: auto;
   border-radius: 0.2rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+}
+
+.about-container:not(:last-child) {
   margin-bottom: 5rem;
 }
 
@@ -200,8 +219,10 @@ header {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(21, 5vw);
   grid-gap: 0.5em;
-  padding: 0.75rem;
+  margin: 0.75rem;
   margin: auto;
+  width: 95%;
+  min-width: 320px;
 }
 /* CSS Grid Gallery inspired by Jonas Schemdtmann's Advanced CSS Udemy Course  */
 .gallery-img {
@@ -254,4 +275,87 @@ header {
 #photo-9 {
   grid-column: 5/13;
   grid-row: 18/22;
+}
+
+/* ==== CONTACT SECTION ==== */
+
+/* ==== CONTACT FORM ==== */
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  min-width: 320px;
+  background-color: var(--color-primary);
+  padding: 3rem 2rem;
+  margin: 0 auto;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+}
+#contact-form-heading {
+  margin-bottom: 1.5rem;
+}
+.form-input {
+  background-color: var(--color-white);
+
+  font-family: "Lato", sans-serif;
+  font-size: 1.8rem;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  outline: none;
+  border-radius: 0.2rem;
+  border: none;
+}
+
+.form-label {
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  color: var(--color-secondary);
+  transition: all 0.2s;
+  font-weight: 700;
+}
+
+option[value=""][disabled] {
+  display: none;
+}
+
+/* ==== CONTACT DETAILS ==== */
+
+#contact-details {
+  width: 95%;
+  min-width: 320px;
+  background-color: var(--color-primary);
+  margin: 4rem auto;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: min-content 1fr 1fr;
+  color: var(--color-secondary);
+  overflow: hidden;
+}
+
+#contact-details-heading {
+  margin: 1.5rem 0;
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+.contact-area {
+  margin: 1rem;
+}
+.contact-location {
+  font-size: 2rem;
+}
+.contact-text {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.contact-text p {
+  color: var(--color-white);
+  overflow-wrap: break-word;
 }

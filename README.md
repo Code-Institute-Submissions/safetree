@@ -97,9 +97,12 @@ The website should split into three areas. Considering the purpose of the websit
 - [Desktop Wireframe](https://wireframe.cc/pro/pp/9b32089f7389693#pvh1r37l)
 
 The website will be organised into the three sections above within a single scroll-able page.
-- A single page design works best, as the it will allow users the best opportunity to take in  each section of content.
-	- This is particularly beneficial for first time visitors as the information and visual sections both complement each other in terms of content.
-- The navigation links will allow users to jump to any particular section of the page, particularly for those who know of our service and simply want to make contact.
+
+A single page design works best, as the it will allow users the best opportunity to take in  each section of content.
+
+This is particularly beneficial for first time visitors as the information and visual sections both complement each other in terms of content.
+
+The navigation links will allow users to jump to any particular section of the page, particularly for those who know of our service and simply want to make contact.
 
 ---
 
@@ -113,11 +116,11 @@ For the paragraph font I chose ['Lato' by  Łukasz Dziedzic](https://fonts.googl
 
 #### Colour Scheme
 
-**Primary Colour**: a dark, mossy green inspired by Ireland and nature
+**Primary Colour** | #295C47 | a dark, mossy green inspired by Ireland and nature
 
-**Secondary Colour**: a golden yellow, to represent sun to brighten up the page without being too harsh
+**Secondary Colour** | #F6B040 | a golden yellow, to represent sun to brighten up the page without being too harsh
 
-**White Colour**: a softer white colour to prevent harshness in the blank spaces of the page and improve readability
+**White Colour** | #F8F8F8 | a softer white colour to prevent harshness in the blank spaces of the page and improve readability
 
 ![COLOR SCHEME](https://i.imgur.com/OgeRgeV.png)
 
