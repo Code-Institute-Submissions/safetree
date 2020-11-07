@@ -26,6 +26,15 @@ body {
   background-color: var(--color-white);
 }
 
+/* Base section styling for consistency (as was being repeated in each section rather than DRY) */
+section {
+  width: 90%;
+  min-width: 320px;
+  max-width: 450px;
+  margin: auto;
+  overflow: hidden;
+}
+
 /* ======== DEFINE COLOR VARIABLES ======== */
 :root {
   --color-primary: rgb(32, 80, 60);
@@ -177,8 +186,7 @@ nav {
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
 }
-
-#logo-link:hover svg,
+overfl #logo-link:hover svg,
 #logo-link:active svg,
 #logo-link:focus svg {
   fill: var(--color-secondary);
@@ -284,8 +292,6 @@ header {
   display: flex;
   flex-direction: column;
   background-color: var(--color-primary);
-  width: 95%;
-  min-width: 320px;
   margin: auto;
   border-radius: 0.2rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
@@ -302,7 +308,7 @@ header {
 
 .about-para {
   font-family: "Lato", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 3rem;
   color: var(--color-white);
 }
@@ -327,12 +333,10 @@ header {
 #img-gallery {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(21, 5vw);
+  grid-template-rows: repeat(21, 2rem);
   grid-gap: 0.5em;
   margin: 0.75rem;
   margin: auto;
-  width: 95%;
-  min-width: 320px;
 }
 /* CSS Grid Gallery inspired by Jonas Schemdtmann's Advanced CSS Udemy Course  */
 .gallery-img {
@@ -394,8 +398,6 @@ header {
 #contact-form {
   display: flex;
   flex-direction: column;
-  width: 95%;
-  min-width: 320px;
   background-color: var(--color-primary);
   padding: 3rem 2rem;
   margin: 0 auto;
@@ -408,7 +410,7 @@ header {
 .form-input {
   background-color: var(--color-white);
   font-family: "Lato", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   padding: 0.5rem;
   margin: 1rem 0;
   outline: none;
@@ -463,8 +465,6 @@ option[value=""][disabled] {
 /* ======= CONTACT DETAILS SECTION ======= */
 
 #contact-details {
-  width: 95%;
-  min-width: 320px;
   background-color: var(--color-primary);
   margin: 4rem auto;
   border-radius: 0.2rem;
@@ -522,7 +522,7 @@ footer {
 
 #footer-social p {
   grid-column: 1/5;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-family: "Lato", sans-serif;
   color: var(--color-white);
   margin: 1rem auto;
@@ -533,10 +533,20 @@ footer {
   color: var(--color-secondary);
 }
 
-.social-icon {
+.social-link {
   font-size: 4rem;
   color: var(--color-secondary);
   margin-bottom: 1rem;
+  outline: none;
+  padding: 0.5rem;
+  transition: all 0.2s;
+}
+.social-link:hover,
+.social-link:focus,
+.social-link:active {
+  color: var(--color-white);
+  font-size: 4.5rem;
+  padding: 0;
 }
 
 #footer-credit {
@@ -557,9 +567,11 @@ footer {
 .credit-link:visited {
   color: var(--color-secondary);
 }
+.credit-link:hover {
+  color: var(--color-white);
+}
 .credit-link:focus,
 .credit-link:active {
   text-decoration: underline;
   font-style: italic;
-  font-size: 1.3rem;
 }
