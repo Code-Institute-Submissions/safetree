@@ -23,6 +23,7 @@ A link to the live website is [HERE](https://cjcon90.github.io/safetree/)
 - Technologies Used
 - Testing
 - Bugs & Fixes
+	- Known Bugs 
 - Deployment
 - Credits & Resources
 
@@ -291,6 +292,10 @@ Extensive testing took place to ensure that the page was fully functional, acces
   }
 }
 ```
+
+### Known Bugs
+**Bug:** As the header hero image is sized using 100vh, it can visibly change size on mobile device when scrolling downwards through page as the address bar in the mobile browser disappears (thus changing the viewport height)
+**Future Fix:** Possible  fix can be implemented with JavaScript, using `window.innerHeight` to size the image instead of vh, [as per this article by GitHub user **chanind**](https://chanind.github.io/javascript/2019/09/28/avoid-100vh-on-mobile-web.html) 
 
 ## Deployment
 
