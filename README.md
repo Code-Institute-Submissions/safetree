@@ -182,13 +182,21 @@ The navbar animation is likened to the 'opening of a book' to create a more imme
 **Bug:** Scrolling on mobile was laggy due to large gallery image sizes.
 
 **Fix:** Used *cwebp* and *ImageMagick* to create loops in bash terminal to optimise all images for website.
+
 Large resize loop:
+
 `for f in * ; do convert $f -scale 30% lg/$f ; done`
+
 Medium resize loop:
+
 `for f in * ; do convert $f -scale 20% md/$f ; done`
+
 Small resize loop:
+
 `for f in * ; do convert $f -scale 10% sm/$f ; done`
+
 Batch convert files to .webp in each new directory:
+
 `for i in {1..20}; do cwebp -q 100 photo-"${i}".jpg -o photo-"${i}".webp; done`
 
 ---

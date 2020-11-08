@@ -430,6 +430,10 @@ header {
   transition: all 0.2s;
   font-weight: 700;
 }
+.formgroup {
+  display: flex;
+  flex-direction: column;
+}
 
 option[value=""][disabled] {
   display: none;
@@ -518,6 +522,7 @@ footer {
   grid-template-rows: repeat(2, min-content);
   place-items: center;
   width: 70%;
+  max-width: 360px;
 }
 
 #footer-social p {
@@ -576,7 +581,7 @@ footer {
   font-style: italic;
 }
 
-/* ======= TABLET STYLING ======= */
+/* ======= TABLET (PORTRAIT) STYLING ======= */
 
 @media only screen and (min-width: 768px) {
   html {
@@ -607,7 +612,7 @@ footer {
   /* ======= GALLERY TABLET ======= */
 
   #img-gallery {
-    grid-template-rows: repeat(21, 3.5rem);
+    grid-template-rows: repeat(21, 3rem);
   }
 
   /* ======= CONTACT TABLET ======= */
@@ -625,17 +630,111 @@ footer {
     font-size: 2.25rem;
   }
   .contact-text {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 2.5rem;
   }
   .contact-text svg {
-    font-size: 3.2rem;
-    transform: translateY(1rem);
+    font-size: 2.5rem;
     margin: 0 1rem;
   }
 
+  /* ======= FOOTER TABLET ======= */
+
   #footer-credit p {
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+  }
+}
+
+/* ======= LANDSCAPE STYLING ======= */
+
+@media only screen and (orientation: landscape) {
+  section {
+    width: 90%;
+    max-width: 75rem;
+  }
+
+  /* ===== HEADER ===== */
+
+  #header-img {
+    background: url("../img/photos/md/photo-1.webp") no-repeat left center;
+    background-attachment: scroll;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+  }
+
+  header {
+    background: url("../img/photos/md/photo-2.webp") no-repeat left bottom;
+    background-size: 50%;
+    background-color: var(--color-primary);
+  }
+
+  #title-block {
+    padding: 2rem;
+  }
+
+  nav {
+    height: 10vh;
+    border-bottom: 1px solid var(--color-primary-dark);
+  }
+
+  #header-img {
+    border-left: 1px solid var(--color-primary-dark);
+  }
+  #title {
+    font-size: 8rem;
+  }
+  #subtitle {
+    font-size: 3.5rem;
+  }
+
+  .nav-link {
+    font-size: 2rem;
+  }
+
+  /* ======= ABOUT LANDSCAPE ======= */
+
+  .about-container:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+
+  .about-container {
+    flex-direction: row;
+    align-items: center;
+  }
+  .about-text {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .about-para {
+    text-align: left;
+    align-self: center;
+  }
+
+  .about-picture {
+    flex-basis: 50%;
+    max-height: 400px;
+  }
+
+  /* ======= CONTACT LANDSCAPE ======= */
+
+  #contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, min-content);
+    column-gap: 2rem;
+  }
+  #messagegroup {
+    grid-column: 1/3;
+    grid-row: 4/5;
+  }
+  #form-submit {
+    grid-column: 1/3;
+    grid-row: 5/6;
+    width: 40%;
   }
 }
