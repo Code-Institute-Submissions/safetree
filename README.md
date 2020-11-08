@@ -146,7 +146,7 @@ For the paragraph font I chose ['Roboto' font by Christian Robertson](https://fo
 
 Considering the importance of visuals for this website, I implemented animations into the initial page load.
 
-The navbar animation is likened to the 'opening of a book' to create a more immersive experience on entry to the website - initially prioritising the *SafeTree* logo and  title before bringing the hero image info primary focus.
+The navbar animation is likened to the 'opening of a book' to create a more immersive experience on entry to the website - initially prioritising the _SafeTree_ logo and title before bringing the hero image info primary focus.
 
 ---
 
@@ -160,25 +160,25 @@ The navbar animation is likened to the 'opening of a book' to create a more imme
 ### Frameworks, Libraries & Programs
 
 1. [Google Fonts](https://fonts.google.com/)
-	- Used to import the ['Roboto' font](https://fonts.google.com/specimen/Roboto) designed by Christian Robertson.
+   - Used to import the ['Roboto' font](https://fonts.google.com/specimen/Roboto) designed by Christian Robertson.
 1. [Font Awesome](https://fontawesome.com/)
-	- Used to import the social media link icons for the footer section
+   - Used to import the social media link icons for the footer section
 1. [Font Squirrel](https://www.fontsquirrel.com/fonts/norwester)
-	- Used to import the Norwester font by Jamie Wilson
+   - Used to import the Norwester font by Jamie Wilson
 1. [Flaticon](https://www.flaticon.com/)
-	- Used to import the main SafeTree icon, [designed by Freepik](https://www.flaticon.com/free-icon/tree_785202?term=tree&page=1&position=15)
+   - Used to import the main SafeTree icon, [designed by Freepik](https://www.flaticon.com/free-icon/tree_785202?term=tree&page=1&position=15)
 1. [Wireframe.cc](https://wireframe.cc/)
-	- Used for creating wireframes formobile, tablet and desktop
+   - Used for creating wireframes formobile, tablet and desktop
 1. [Canva](https://www.canva.com/)
-	- Used for creating an [original design](https://www.canva.com/design/DAEMAKjwqWA/v1I9xqR00DFEtustp3z0tA/view?utm_content=DAEMAKjwqWA&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton) for SafeTree logo and primary font
+   - Used for creating an [original design](https://www.canva.com/design/DAEMAKjwqWA/v1I9xqR00DFEtustp3z0tA/view?utm_content=DAEMAKjwqWA&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton) for SafeTree logo and primary font
 1. [SVG Optimizer](https://petercollingridge.appspot.com/svg-optimiser)
-	- For minimizing SVG path to for use in HTML
+   - For minimizing SVG path to for use in HTML
 1. [cwebp](https://developers.google.com/speed/webp/docs/cwebp)
-	- For batch converting images to webp format using Linux terminal
+   - For batch converting images to webp format using Linux terminal
 1. [ImageMagick](https://imagemagick.org/)
-	- For batch resizing images using Linux terminal
+   - For batch resizing images using Linux terminal
 1. [AutoPrefixer](https://autoprefixer.github.io/)
-	- For improving CSS compatiability with older browsers
+   - For improving CSS compatiability with older browsers
 
 ---
 
@@ -189,21 +189,21 @@ Extensive testing took place to ensure that the page was fullt functional, accis
 - Use of Chrome Dev Tools to test responsiveness on multiple devices, ranging from simulated Galaxy Fold (280px width) to a simulated 4K resolution (3840px width).
   - Following issues raised in terms of contrast, I altered the [color scheme to ensure full accessibility](https://github.com/cjcon90/safetree/tree/main/docs/colors)
   - Ensured text remaied visible during webfont load with [font-display: swap](https://web.dev/font-display/?utm_source=lighthouse&utm_medium=devtools)
-- Tabbing through entire page to ensure that every link was accessible with use of tab and highlighted when focused 
+- Tabbing through entire page to ensure that every link was accessible with use of tab and highlighted when focused
 - Testing every internal link on page to ensure that it works
-	- Logo link to top of page
-	- Navbar links
-	- Image links to load full-size image
-	- Contact form inputs
-	- mailto: links in contact section
-	- footer links
+  - Logo link to top of page
+  - Navbar links
+  - Image links to load full-size image
+  - Contact form inputs
+  - mailto: links in contact section
+  - footer links
 - Changing image selection in srcset to ensure that it was working at different resolutions
 - Testing markup on [W3C Markup Validation Service](https://validator.w3.org/)
 - Testing CSS on [Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/)
 - Testing page with Lighthouse in Chrome Dev Tools to optimise performance, accessibility, best practices and SEO
-	- Lighthouse highlighted performance issues with images not being resized properly, particularly in mobile, however when I made images smaller as suggested there was noticeable lack of definition, leading me to keep the larger sized images.
+  - Lighthouse highlighted performance issues with images not being resized properly, particularly in mobile, however when I made images smaller as suggested there was noticeable lack of definition, leading me to keep the larger sized images.
 - Ran CSS through auto-prefixer and saved as separate .css file
-	- Linked HTML to prefixed .css file before pushing github. Kept original CSS file for future editing.
+  - Linked HTML to prefixed .css file before pushing github. Kept original CSS file for future editing.
 
 ---
 
@@ -211,16 +211,16 @@ Extensive testing took place to ensure that the page was fullt functional, accis
 
 **Bug:** Scrolling on mobile was laggy due to large gallery image sizes.
 
-**Fix:** Used *cwebp* and *ImageMagick* to create loops in bash terminal to optimise all images for website.
+**Fix:** Used _cwebp_ and _ImageMagick_ to create loops in bash terminal to optimise all images for website.
 
 - Large resize loop:
-	- `for f in * ; do convert $f -scale 30% lg/$f ; done`
+  - `for f in * ; do convert $f -scale 30% lg/$f ; done`
 - Medium resize loop:
-	- `for f in * ; do convert $f -scale 20% md/$f ; done`
+  - `for f in * ; do convert $f -scale 20% md/$f ; done`
 - Small resize loop:
-	- `for f in * ; do convert $f -scale 10% sm/$f ; done`
+  - `for f in * ; do convert $f -scale 10% sm/$f ; done`
 - Batch convert files to .webp in each new directory:
-	- `for i in {1..20}; do cwebp -q 100 photo-"${i}".jpg -o photo-"${i}".webp; done`
+  - `for i in {1..20}; do cwebp -q 100 photo-"${i}".jpg -o photo-"${i}".webp; done`
 
 ---
 
@@ -251,6 +251,7 @@ Extensive testing took place to ensure that the page was fullt functional, accis
 
 **Bug:** Fixed navbar was going underneath title text when scrolling/
 **Fix:** Made navbar `z-index: 100` and then added `z-index` change to title text during animation:
+
 ```css
 @keyframes title-start {
   0% {
@@ -276,18 +277,20 @@ Extensive testing took place to ensure that the page was fullt functional, accis
 ## Deployment
 
 The site is deployed on github pages. The setup involved was:
+
 - Using Git, I pushed all my committed code to my respository at [https://github.com/cjcon90/safetree](https://github.com/cjcon90/safetree).
--  Opened the settings tab in my project repository
--  Scrolled down to 'Github Pages' section
--  Selected 'main' branch and 'root' folder to deploy to github pages, and pressed 'Save'
--  Navigated to https://cjcon90.github.io/safetree/ to view deployed website
--  Github Pages deployment is automatically updated with every push
--  Project can be downloaded as a .zip file by clicking green 'Code' button in project repository and pressing 'Download ZIP'
--  Alternatively project can be cloned by entering `git clone git@github.com:cjcon90/safetree.git` in terminal.
+- Opened the settings tab in my project repository
+- Scrolled down to 'Github Pages' section
+- Selected 'main' branch and 'root' folder to deploy to github pages, and pressed 'Save'
+- Navigated to https://cjcon90.github.io/safetree/ to view deployed website
+- Github Pages deployment is automatically updated with every push
+- Project can be downloaded as a .zip file by clicking green 'Code' button in project repository and pressing 'Download ZIP'
+- Alternatively project can be cloned by entering `git clone git@github.com:cjcon90/safetree.git` in terminal.
 
 ## Credits & Resources
 
 ### Code
+
 - Horizontal lines before and after section headings was inspired by [this StackOverflow post](https://stackoverflow.com/a/38213637)
 - Placeholder for `select` element code found through [this StackOverflow post](https://stackoverflow.com/a/5859221)
 - Using `srcset` to create responsive images of different sizes found on [CSS Tricks](https://css-tricks.com/responsive-images-css/)
@@ -296,10 +299,12 @@ The site is deployed on github pages. The setup involved was:
 - Creating a loop in bash terminal to batch resize images found in [this opensource.com post](https://opensource.com/article/19/6/how-write-loop-bash#:~:text=The%20syntax%20to%20loop%20through,the%20*%20wildcard%20matches%20everything)
 - Using cwebp to convert images to .webp format found in [this Tecmint post](https://www.tecmint.com/convert-images-to-webp-format-in-linux/)
 - CSS Grid Gallery section & setting `html {font-size:62.5%}` and using `rem` units for responsive sizing oth inspired by [Jonas Schmedtmann's CSS course on Udemy](https://www.udemy.com/course/advanced-css-and-sass/)
+- Updating site metadata following [Open Graph Protocol](https://ogp.me/) guide.
 
 ### Photos
 
 All photos were sourced from [Unsplash](https://unsplash.com/). Photo & Artist links are as follows:
+
 - [Jeremy Chen @jeremychen](https://unsplash.com/photos/Zj6UbTyrORk)
 - [Szilvia Basso @szilviabasso](https://unsplash.com/photos/cPGv4rXhryc)
 - [Daniel Nainggolan @caspersky123](https://unsplash.com/photos/W6dRiZHDZAo)
@@ -316,9 +321,7 @@ All photos were sourced from [Unsplash](https://unsplash.com/). Photo & Artist l
 - [Kelly Sikkema @ kellysikkema](https://unsplash.com/photos/KblK7DbKam4)
 - [Greg Rosenke @greg_rosenke](https://unsplash.com/photos/jd4_-NCdLE4)
 - Markus Spiske @markusspiske
-	- [Credit 1](https://unsplash.com/photos/Q1oVD2DwNps)
-	- [Credit 2](https://unsplash.com/photos/AAtPYCeUk0Q)
-	- [Credit 3](https://unsplash.com/photos/F9FFiYu8tIA)
-	- [Credit 4](https://unsplash.com/photos/YNSrQa-t3Y4)
-
-
+  - [Credit 1](https://unsplash.com/photos/Q1oVD2DwNps)
+  - [Credit 2](https://unsplash.com/photos/AAtPYCeUk0Q)
+  - [Credit 3](https://unsplash.com/photos/F9FFiYu8tIA)
+  - [Credit 4](https://unsplash.com/photos/YNSrQa-t3Y4)
