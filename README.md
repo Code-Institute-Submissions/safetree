@@ -1,5 +1,9 @@
 # SafeTree Adventure Therapy
 
+
+
+![Am I responsive Screenshot](https://res.cloudinary.com/cjcon90/image/upload/v1604867939/codeinstitute/safetree/am-i-responsive-screenshot_jlioii.png)
+
 The purpose of this website is to promote an organisation that offers alternative therapy for vulnerable young people through the use of outdoor activities in nature.
 
 A link to the live website is [HERE](https://cjcon90.github.io/safetree/)
