@@ -17,9 +17,10 @@ A link to the live website is [HERE](https://cjcon90.github.io/safetree/)
   - Skeleton
   - Surface
 - Technologies Used
-- Bugs
 - Testing
-- Credits
+- Bugs & Fixes
+- Deployment
+- Credits & Resources
 
 ---
 
@@ -127,7 +128,7 @@ The navigation links will allow users to jump to any particular section of the p
 
 For the title/headings I chose ['Norwester' by Jamie Wilson](https://www.fontsquirrel.com/fonts/norwester). The mix of small and large uppercase letters is 'child-friendly' in terms of typography. It has an appearance of being hand-crafted whilst also being reminiscent of old western 'adventure' films, which fits with the theme.
 
-For the paragraph font I chose ['Lato' by Łukasz Dziedzic](https://fonts.google.com/specimen/Lato). A clean and legible all purpose sans-serif font.
+For the paragraph font I chose ['Roboto' font by Christian Robertson](https://fonts.google.com/specimen/Roboto). A clean and legible all purpose sans-serif font.
 
 #### Colour Scheme
 
@@ -159,9 +160,11 @@ The navbar animation is likened to the 'opening of a book' to create a more imme
 ### Frameworks, Libraries & Programs
 
 1. [Google Fonts](https://fonts.google.com/)
-	- Used to import the ['Lato' font](https://fonts.google.com/specimen/Lato) designed by Łukasz Dziedzic.
+	- Used to import the ['Roboto' font](https://fonts.google.com/specimen/Roboto) designed by Christian Robertson.
 1. [Font Awesome](https://fontawesome.com/)
 	- Used to import the social media link icons for the footer section
+1. [Font Squirrel](https://www.fontsquirrel.com/fonts/norwester)
+	- Used to import the Norwester font by Jamie Wilson
 1. [Flaticon](https://www.flaticon.com/)
 	- Used to import the main SafeTree icon, [designed by Freepik](https://www.flaticon.com/free-icon/tree_785202?term=tree&page=1&position=15)
 1. [Wireframe.cc](https://wireframe.cc/)
@@ -174,30 +177,50 @@ The navbar animation is likened to the 'opening of a book' to create a more imme
 	- For batch converting images to webp format using Linux terminal
 1. [ImageMagick](https://imagemagick.org/)
 	- For batch resizing images using Linux terminal
+1. [AutoPrefixer](https://autoprefixer.github.io/)
+	- For improving CSS compatiability with older browsers
 
 ---
 
-## Bugs
+## Testing
+
+Extensive testing took place to ensure that the page was fullt functional, accissible and responsive.
+
+- Use of Chrome Dev Tools to test responsiveness on multiple devices, ranging from simulated Galaxy Fold (280px width) to a simulated 4K resolution (3840px width).
+  - Following issues raised in terms of contrast, I altered the [color scheme to ensure full accessibility](https://github.com/cjcon90/safetree/tree/main/docs/colors)
+  - Ensured text remaied visible during webfont load with [font-display: swap](https://web.dev/font-display/?utm_source=lighthouse&utm_medium=devtools)
+- Tabbing through entire page to ensure that every link was accessible with use of tab and highlighted when focused 
+- Testing every internal link on page to ensure that it works
+	- Logo link to top of page
+	- Navbar links
+	- Image links to load full-size image
+	- Contact form inputs
+	- mailto: links in contact section
+	- footer links
+- Changing image selection in srcset to ensure that it was working at different resolutions
+- Testing markup on [W3C Markup Validation Service](https://validator.w3.org/)
+- Testing CSS on [Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+- Testing page with Lighthouse in Chrome Dev Tools to optimise performance, accessibility, best practices and SEO
+	- Lighthouse highlighted performance issues with images not being resized properly, particularly in mobile, however when I made images smaller as suggested there was noticeable lack of definition, leading me to keep the larger sized images.
+- Ran CSS through auto-prefixer and saved as separate .css file
+	- Linked HTML to prefixed .css file before pushing github. Kept original CSS file for future editing.
+
+---
+
+## Bugs & Fixes
 
 **Bug:** Scrolling on mobile was laggy due to large gallery image sizes.
 
 **Fix:** Used *cwebp* and *ImageMagick* to create loops in bash terminal to optimise all images for website.
 
-Large resize loop:
-
-`for f in * ; do convert $f -scale 30% lg/$f ; done`
-
-Medium resize loop:
-
-`for f in * ; do convert $f -scale 20% md/$f ; done`
-
-Small resize loop:
-
-`for f in * ; do convert $f -scale 10% sm/$f ; done`
-
-Batch convert files to .webp in each new directory:
-
-`for i in {1..20}; do cwebp -q 100 photo-"${i}".jpg -o photo-"${i}".webp; done`
+- Large resize loop:
+	- `for f in * ; do convert $f -scale 30% lg/$f ; done`
+- Medium resize loop:
+	- `for f in * ; do convert $f -scale 20% md/$f ; done`
+- Small resize loop:
+	- `for f in * ; do convert $f -scale 10% sm/$f ; done`
+- Batch convert files to .webp in each new directory:
+	- `for i in {1..20}; do cwebp -q 100 photo-"${i}".jpg -o photo-"${i}".webp; done`
 
 ---
 
@@ -221,8 +244,81 @@ Batch convert files to .webp in each new directory:
 }
 ```
 
+**Bug:** Input boxes moved position when adding a border to highlight when they were focused or active
+**Fix**: Added a transparent border to input boxes when not focused or active
+
 ---
 
-## Testing
+**Bug:** Fixed navbar was going underneath title text when scrolling/
+**Fix:** Made navbar `z-index: 100` and then added `z-index` change to title text during animation:
+```css
+@keyframes title-start {
+  0% {
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 101; /*TEXT STARTS ABOVE NAVBAR*/
+    background-color: transparent;
+  }
+
+  50% {
+    background-color: transparent;
+  100% {
+    top: 60%;
+    left: 0%;
+    transform: translate(0, -50%);
+    z-index: 99; /*TEXT ENDS BELOW NAVBAR*/
+    background-color: var(--color-primary-fade);
+  }
+}
+```
+
+## Deployment
+
+The site is deployed on github pages. The setup involved was:
+- Using Git, I pushed all my committed code to my respository at [https://github.com/cjcon90/safetree](https://github.com/cjcon90/safetree).
+-  Opened the settings tab in my project repository
+-  Scrolled down to 'Github Pages' section
+-  Selected 'main' branch and 'root' folder to deploy to github pages, and pressed 'Save'
+-  Navigated to https://cjcon90.github.io/safetree/ to view deployed website
+-  Github Pages deployment is automatically updated with every push
+-  Project can be downloaded as a .zip file by clicking green 'Code' button in project repository and pressing 'Download ZIP'
+-  Alternatively project can be cloned by entering `git clone git@github.com:cjcon90/safetree.git` in terminal.
+
+## Credits & Resources
+
+### Code
+- Horizontal lines before and after section headings was inspired by [this StackOverflow post](https://stackoverflow.com/a/38213637)
+- Placeholder for `select` element code found through [this StackOverflow post](https://stackoverflow.com/a/5859221)
+- Using `srcset` to create responsive images of different sizes found on [CSS Tricks](https://css-tricks.com/responsive-images-css/)
+- Using `nth-child(odd)` selector found in [this CSS tricks article](https://css-tricks.com/almanac/selectors/n/nth-child/)
+- Using `padding-top` and `margin-top` to offset navbar for internal links found in [this CSS Tricks article](https://css-tricks.com/hash-tag-links-padding/)
+- Creating a loop in bash terminal to batch resize images found in [this opensource.com post](https://opensource.com/article/19/6/how-write-loop-bash#:~:text=The%20syntax%20to%20loop%20through,the%20*%20wildcard%20matches%20everything)
+- Using cwebp to convert images to .webp format found in [this Tecmint post](https://www.tecmint.com/convert-images-to-webp-format-in-linux/)
+- CSS Grid Gallery section & setting `html {font-size:62.5%}` and using `rem` units for responsive sizing oth inspired by [Jonas Schmedtmann's CSS course on Udemy](https://www.udemy.com/course/advanced-css-and-sass/)
+
+### Photos
+
+All photos were sourced from [Unsplash](https://unsplash.com/). Photo & Artist links are as follows:
+- [Jeremy Chen @jeremychen](https://unsplash.com/photos/Zj6UbTyrORk)
+- [Szilvia Basso @szilviabasso](https://unsplash.com/photos/cPGv4rXhryc)
+- [Daniel Nainggolan @caspersky123](https://unsplash.com/photos/W6dRiZHDZAo)
+- [Alan Labisch @labisch](https://unsplash.com/photos/3mhcmX9Zlhg)
+- [Ben H @roguephoto](https://unsplash.com/photos/nlQbjyPRfkA)
+- [Jaron Nix @jaronnix](https://unsplash.com/photos/SFvaXh0MyT0)
+- [Andreas Strandman @strandman](https://unsplash.com/photos/Kc_rw2nnDgk)
+- [Ava Hermann @avahermann](https://unsplash.com/photos/5CUrbSVvFK0)
+- [Todd Trapani @ttrapani](https://unsplash.com/photos/5LHzBpiTuzQ)
+- [Daan Weijers @daanweijers](https://unsplash.com/photos/pSaEMIiUO84)
+- [Vadim Sadovski @vadimsadovski](https://unsplash.com/photos/8qXnX2T_3mo)
+- [John-Mark Smith @mrrrk_smith](https://unsplash.com/photos/9QTQFihyles)
+- [Benjamin Manley @benjaminmanley](https://unsplash.com/photos/QkflfhJn1KA)
+- [Kelly Sikkema @ kellysikkema](https://unsplash.com/photos/KblK7DbKam4)
+- [Greg Rosenke @greg_rosenke](https://unsplash.com/photos/jd4_-NCdLE4)
+- Markus Spiske @markusspiske
+	- [Credit 1](https://unsplash.com/photos/Q1oVD2DwNps)
+	- [Credit 2](https://unsplash.com/photos/AAtPYCeUk0Q)
+	- [Credit 3](https://unsplash.com/photos/F9FFiYu8tIA)
+	- [Credit 4](https://unsplash.com/photos/YNSrQa-t3Y4)
 
 

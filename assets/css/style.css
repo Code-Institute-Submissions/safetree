@@ -1,5 +1,5 @@
 /* ======== DEFINE FONTS ======== */
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
 @font-face {
   font-family: Norwester;
   src: url("../fonts/norwester.otf") format("opentype");
@@ -44,8 +44,8 @@ section {
   width: 90%;
   max-width: 450px;
   margin: auto;
-  padding-top: 5rem;
-  margin-top: -5rem; /* to offset hashtag link location so it is not covered by navbar - https://css-tricks.com/hash-tag-links-padding/ */
+  padding-top: 10vh;
+  margin-top: -10vh; /* to offset hashtag link location so it is not covered by navbar - https://css-tricks.com/hash-tag-links-padding/ */
 }
 
 /* Make sections fill up full width on smaller mobiles */
@@ -167,9 +167,10 @@ nav {
   text-decoration: none;
   padding: 0 0.5rem;
   text-align: center;
-  font-family: "Lato", sans-serif;
-  letter-spacing: 0.5px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
   font-size: 1.6rem;
+  font-weight: 500;
   text-transform: uppercase;
   color: var(--color-white);
   outline: none;
@@ -179,12 +180,6 @@ nav {
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
   transition: all 0.2s;
-}
-
-.nav-link:hover,
-.nav-link:active,
-.nav-link:focus {
-  color: var(--color-secondary);
 }
 
 .nav-link:hover,
@@ -325,7 +320,7 @@ header {
 }
 
 .about-para {
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   line-height: 3rem;
   color: var(--color-white);
@@ -364,7 +359,12 @@ header {
   display: block;
   border-radius: 0.2rem;
 }
-.gallery-img:hover {
+.gallery-link {
+  outline: none;
+}
+.gallery-link:hover,
+.gallery-link:focus,
+.gallery-link:active {
   transform: scale(1.07);
   border: solid 0.2rem var(--color-secondary);
   transition: transform 0.4s, border 0.2s;
@@ -431,17 +431,21 @@ header {
 
 .form-input {
   background-color: var(--color-white);
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   padding: 0.5rem;
   margin: 1rem 0 2.5rem 0;
   outline: none;
   border-radius: 0.2rem;
-  border: none;
+  border: 0.3rem solid transparent;
+}
+.form-input:focus,
+.form-input:active {
+  border: 0.3rem solid var(--color-secondary);
 }
 
 .form-label {
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
   color: var(--color-secondary);
@@ -503,8 +507,9 @@ option[value=""][disabled] {
   margin: 1rem 0;
 }
 .contact-location {
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 2rem;
+  letter-spacing: 1px;
 }
 .contact-text {
   display: flex;
@@ -513,7 +518,7 @@ option[value=""][disabled] {
   gap: 0.5rem;
   font-size: 1.4rem;
   margin: 0.5rem 0;
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 2rem;
 }
 
@@ -555,7 +560,7 @@ footer {
 #footer-social p {
   grid-column: 1/5;
   font-size: 1.6rem;
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: var(--color-white);
   margin: 1rem auto;
 }
@@ -583,7 +588,7 @@ footer {
 
 #footer-credit {
   font-size: 1.2rem;
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: white;
   padding: 0.25rem 0;
 }
@@ -766,8 +771,6 @@ footer {
 
 @media only screen and (min-width: 1400px) {
   section {
-    padding-top: 7.5rem;
-    margin-top: -7.5rem;
     width: 80%;
     max-width: 1100px;
   }
