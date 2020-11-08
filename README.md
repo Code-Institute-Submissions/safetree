@@ -314,6 +314,7 @@ The site is deployed on GitHub pages. The setup involved was:
 - Using cwebp to convert images to .webp format found in [this Tecmint post](https://www.tecmint.com/convert-images-to-webp-format-in-linux/)
 - CSS Grid Gallery section & setting `html {font-size:62.5%}` and using `rem` units for responsive sizing oth inspired by [Jonas Schmedtmann's CSS course on Udemy](https://www.udemy.com/course/advanced-css-and-sass/)
 - Updating site metadata following [Open Graph Protocol](https://ogp.me/) guide.
+- Added custom scrollbar following [w3schools guide.](https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp)
 
 ### Photos
 
