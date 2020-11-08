@@ -120,6 +120,11 @@ This is particularly beneficial for first time visitors as the information and v
 
 The navigation links will allow users to jump to any particular section of the page, particularly for those who know of our service and simply want to make contact.
 
+#### Changes to Wireframes
+Following initial testing, I made two significant changes to the original wireframes:
+- In landscape/desktop mode I added an additional image to the hero section rather than having a blank section. This worked better with the navbar and was much more vibrant.
+- In tablet mode, I did not continue with having two cards next to eachother side by side. THis did not fit with the text content in the web page. Having larger cards fit the page better, and brought more focus to the photos incorporated in each about section card.
+
 ---
 
 ### 5. Surface
@@ -202,6 +207,8 @@ Extensive testing took place to ensure that the page was fullt functional, accis
 - Testing CSS on [Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/)
 - Testing page with Lighthouse in Chrome Dev Tools to optimise performance, accessibility, best practices and SEO
   - Lighthouse highlighted performance issues with images not being resized properly, particularly in mobile, however when I made images smaller as suggested there was noticeable lack of definition, leading me to keep the larger sized images.
+	- Lighthouse Report (full report in repo docs/lighthouse folder):
+		- ![Lighthouse Report](https://res.cloudinary.com/cjcon90/image/upload/v1604853888/codeinstitute/safetree/lighthouse-report-8-11-20_jhb2jd.png)
 - Ran CSS through auto-prefixer and saved as separate .css file
   - Linked HTML to prefixed .css file before pushing github. Kept original CSS file for future editing.
 
@@ -325,3 +332,15 @@ All photos were sourced from [Unsplash](https://unsplash.com/). Photo & Artist l
   - [Credit 2](https://unsplash.com/photos/AAtPYCeUk0Q)
   - [Credit 3](https://unsplash.com/photos/F9FFiYu8tIA)
   - [Credit 4](https://unsplash.com/photos/YNSrQa-t3Y4)
+
+### Other Credits
+
+Wording for about/info sections was assisted by  [this research article on family enrichment adventure therapy](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7163833/)
+
+My CI mentor for assisting in planning and preparing for milestone project.
+
+Anna Greaves & Jim Morel for their respective webinars regarding writing a README and completing Milestone Project 1
+
+CodeInstitute lessons on user centric front-end development
+
+Jonas Schmedtmann for his advanced CSS course on Udemy, which I completed in [September 2020](https://res.cloudinary.com/cjcon90/image/upload/v1604854568/certs/2020.09.09_udemy_advanced_css_uw7ywc.jpg)
