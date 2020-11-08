@@ -13,6 +13,19 @@ html {
   /* Original inspiration for this from Jonas Schmedtmann CSS course on Udemy */
 }
 
+/* Adjust sizing so text fits on iPhone 5 size devices */
+@media only screen and (max-width: 320px) {
+  html {
+    font-size: 57.5%;
+  }
+}
+/* Adjust sizing so text fits on Galaxy Fold */
+@media only screen and (max-width: 300px) {
+  html {
+    font-size: 50%;
+  }
+}
+
 /*  ======== CSS BASE / RESET ======== */
 
 * {
@@ -29,12 +42,17 @@ body {
 /* Base sizing for sections (as was being repeated a lot throughout code rather than DRY principle) */
 section {
   width: 90%;
-  min-width: 320px;
   max-width: 450px;
   margin: auto;
-  overflow: hidden;
   padding-top: 5rem;
   margin-top: -5rem; /* to offset hashtag link location so it is not covered by navbar - https://css-tricks.com/hash-tag-links-padding/ */
+}
+
+/* Make sections fill up full width on smaller mobiles */
+@media only screen and (max-width: 360px) {
+  section {
+    width: 100%;
+  }
 }
 
 /* ======== DEFINE COLOR VARIABLES ======== */
@@ -52,7 +70,7 @@ section {
     height: 100vh;
     position: absolute;
   }
-  /* 'position' absolute until 90% is used to prevent the navbar animation from taking up the screen when refreshing on an internal link in the page */
+  /* 'position' absolute until 90% was a fix to prevent the navbar animation from taking up the screen when refreshing on an internal link in the page */
   99% {
     position: absolute;
   }
@@ -80,7 +98,7 @@ section {
     transform: translate(-50%, -50%);
     pointer-events: none;
   }
-  /* stopping pointer events until 90% is to prevent hover effect on logo during initial animation */
+  /* stopping pointer events until 90% is a fix to prevent hover effect on logo during initial animation */
   90% {
     pointer-events: none;
   }
@@ -107,8 +125,8 @@ section {
   50% {
     background-color: transparent; /* Delay transparency is stylistic decision to maximise visual */
   }
-  /* Z-Index change is used to make sure logo & heading appears on the top during initial animation
-      but then is underneath fixed nav-bar when scrolling */
+  /* Z-Index change is a fix to make sure logo & heading appears on the top during initial animation
+      but then is underneath fixed nav-bar when scrolling throguh page */
   100% {
     top: 60%;
     left: 0%;
@@ -506,6 +524,15 @@ option[value=""][disabled] {
 .contact-text p {
   color: var(--color-white);
 }
+.email-link {
+  text-decoration: none;
+  outline: none;
+}
+.email-link:hover p,
+.email-link:active p,
+.email-link:focus p {
+  color: var(--color-secondary);
+}
 
 /* ======= FOOTER ======= */
 
@@ -585,14 +612,14 @@ footer {
 
 @media only screen and (min-width: 768px) {
   html {
-    font-size: 75%;
+    font-size: 70%;
   }
 
   section {
     max-width: 50rem;
   }
 
-  /* ======= ABOUT TABLET ======= */
+  /* ======= ABOUT SECTION TABLET ======= */
 
   .about-text {
     flex-basis: 50%;
@@ -609,13 +636,13 @@ footer {
     flex-basis: 50%;
     max-height: 30rem;
   }
-  /* ======= GALLERY TABLET ======= */
+  /* ======= GALLERY SECTION TABLET ======= */
 
   #img-gallery {
     grid-template-rows: repeat(21, 3rem);
   }
 
-  /* ======= CONTACT TABLET ======= */
+  /* ======= CONTACT SECTION TABLET ======= */
 
   #contact-form {
     padding: 0 6rem 2rem 6rem;
@@ -638,7 +665,7 @@ footer {
     margin: 0 1rem;
   }
 
-  /* ======= FOOTER TABLET ======= */
+  /* ======= FOOTER SECTION TABLET ======= */
 
   #footer-credit p {
     text-align: center;
@@ -654,7 +681,11 @@ footer {
     max-width: 75rem;
   }
 
-  /* ===== HEADER ===== */
+  .nav-link {
+    padding: 0 1.5rem;
+  }
+
+  /* ===== HEADER SECTION LANDSCAPE ===== */
 
   #header-img {
     background: url("../img/photos/md/photo-1.webp") no-repeat left center;
@@ -695,8 +726,9 @@ footer {
     font-size: 2rem;
   }
 
-  /* ======= ABOUT LANDSCAPE ======= */
+  /* ======= ABOUT SECTION LANDSCAPE ======= */
 
+  /* source on nth child function: https://css-tricks.com/almanac/selectors/n/nth-child/ */
   .about-container:nth-child(odd) {
     flex-direction: row-reverse;
   }
@@ -705,22 +737,13 @@ footer {
     flex-direction: row;
     align-items: center;
   }
-  .about-text {
-    flex-basis: 50%;
-    display: flex;
-    flex-direction: column;
-  }
-  .about-para {
-    text-align: left;
-    align-self: center;
-  }
 
   .about-picture {
     flex-basis: 50%;
     max-height: 400px;
   }
 
-  /* ======= CONTACT LANDSCAPE ======= */
+  /* ======= CONTACT SECTION LANDSCAPE ======= */
 
   #contact-form {
     display: grid;
@@ -736,5 +759,74 @@ footer {
     grid-column: 1/3;
     grid-row: 5/6;
     width: 40%;
+  }
+}
+
+/* ======= DESKTOP SIZING ======= */
+
+@media only screen and (min-width: 1400px) {
+  section {
+    padding-top: 7.5rem;
+    margin-top: -7.5rem;
+    width: 80%;
+    max-width: 1100px;
+  }
+  #header-img {
+    background: url("../img/photos/lg/photo-1.webp") no-repeat left center;
+  }
+
+  header {
+    background: url("../img/photos/lg/photo-2.webp") no-repeat left bottom;
+  }
+  .about-text {
+    justify-content: space-between;
+  }
+
+  #img-gallery {
+    grid-template-rows: repeat(21, 6rem);
+  }
+
+  #contact-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: start;
+    color: var(--color-secondary);
+    word-break: break-all;
+  }
+  .contact-text {
+    font-size: 1.6rem;
+  }
+}
+
+/* ======= EXTRA WIDE DESKTOP STYLING ======= */
+@media only screen and (min-width: 2400px) {
+  html {
+    font-size: 120%;
+  }
+  section {
+    max-width: 1800px;
+  }
+
+  .about-text {
+    flex-basis: 60%;
+  }
+  .about-picture {
+    flex-basis: 40%;
+  }
+}
+
+/* ======= 4K STYLING ======= */
+
+@media only screen and (min-width: 3000px) {
+  html {
+    font-size: 150%;
+  }
+  #img-gallery {
+    grid-template-rows: repeat(21, 4.5rem);
+  }
+  #footer-social {
+    max-width: 700px;
   }
 }
