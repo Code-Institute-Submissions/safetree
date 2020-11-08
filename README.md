@@ -36,11 +36,11 @@ We are specialised in trauma-informed care, and we create family-focused and goa
 
 ### Story 1
 
-> "_I am a psychologist working with a high risk young person who's parents are struggling to care for his needs. He is refusing traditional therapeutic intervention. I want to source a service that will provide benefits for him and his family._""
+> "_I am a psychologist working with a high-risk young person who's parents are struggling to care for his needs. He is refusing traditional therapeutic intervention. I want to source a service that will provide benefits for him and his family._""
 
 ### Story 2
 
-> "_I am a social worker. I want to find a service for a young person in care to try and improve and maintain their foster placement. The young person has sensory difficulties and I am hoping to apply for funding to a service that can support them in a peaceful, nature based environment._"
+> "_I am a social worker. I want to find a service for a young person in care to try and improve and maintain their foster placement. The young person has sensory difficulties and I am hoping to apply for funding to a service that can support them in a peaceful, nature-based environment._"
 
 ### Story 3
 
@@ -84,7 +84,7 @@ Considering the strategy of our website and the users' needs as outlined, our we
 
 - Clearly outline what our company does, what are our skills as professionals and what is the service that is offered to young people referred to us.
 - Provide contact details for making a referral to our service and these should be clearly visible and immediately accessible
-  - Also include an integrated contact for for immediate communication
+  - Also include an integrated contact for immediate communication
 - Clearly outline where our service operates and provide locations of our office bases
 - be fully responsive for mobile use
 - Have clearly visible links for the user to each relevant section of the page
@@ -114,16 +114,18 @@ The website should split into three areas. Considering the purpose of the websit
 
 The website will be organised into the three sections above within a single scroll-able page.
 
-A single page design works best, as the it will allow users the best opportunity to take in each section of content.
+A single page design works best, as it will allow users the best opportunity to take in each section of content.
 
-This is particularly beneficial for first time visitors as the information and visual sections both complement each other in terms of content.
+This is particularly beneficial for first-time visitors as the information and visual sections both complement each other in terms of content.
 
 The navigation links will allow users to jump to any particular section of the page, particularly for those who know of our service and simply want to make contact.
 
 #### Changes to Wireframes
+
 Following initial testing, I made two significant changes to the original wireframes:
+
 - In landscape/desktop mode I added an additional image to the hero section rather than having a blank section. This worked better with the navbar and was much more vibrant.
-- In tablet mode, I did not continue with having two cards next to eachother side by side. THis did not fit with the text content in the web page. Having larger cards fit the page better, and brought more focus to the photos incorporated in each about section card.
+- In tablet mode, I did not continue with having two cards next to each other side by side. This did not fit with the text content in the web page. Having larger cards fit the page better, and brought more focus to the photos incorporated in each about section card.
 
 ---
 
@@ -131,15 +133,15 @@ Following initial testing, I made two significant changes to the original wirefr
 
 #### Fonts
 
-For the title/headings I chose ['Norwester' by Jamie Wilson](https://www.fontsquirrel.com/fonts/norwester). The mix of small and large uppercase letters is 'child-friendly' in terms of typography. It has an appearance of being hand-crafted whilst also being reminiscent of old western 'adventure' films, which fits with the theme.
+For the title/headings I chose ['Norwester' by Jamie Wilson](https://www.fontsquirrel.com/fonts/norwester). The mix of small and large uppercase letters is 'child-friendly' in terms of typography. It has the appearance of being hand-crafted whilst also being reminiscent of old western 'adventure' films, which fits with the theme.
 
-For the paragraph font I chose ['Roboto' font by Christian Robertson](https://fonts.google.com/specimen/Roboto). A clean and legible all purpose sans-serif font.
+For the paragraph font I chose ['Roboto' font by Christian Robertson](https://fonts.google.com/specimen/Roboto). A clean and legible all-purpose sans-serif font.
 
 #### Colour Scheme
 
 **Primary Colour** | #20503C | a dark, mossy green inspired by Ireland and nature
 
-**Secondary Colour** | #F1AE42 | a golden yellow, to represent sunlight, offer good contrast to the primary green and to brighten up the page without being too harsh
+**Secondary Colour** | #F1AE42 | a golden yellow, to represent sunlight, and offer a good contrast to the primary green and to brighten up the page without being too harsh
 
 **White Colour** | #F8F8F8 | a softer white colour to prevent harshness in the blank spaces of the page and improve readability
 
@@ -173,44 +175,47 @@ The navbar animation is likened to the 'opening of a book' to create a more imme
 1. [Flaticon](https://www.flaticon.com/)
    - Used to import the main SafeTree icon, [designed by Freepik](https://www.flaticon.com/free-icon/tree_785202?term=tree&page=1&position=15)
 1. [Wireframe.cc](https://wireframe.cc/)
-   - Used for creating wireframes formobile, tablet and desktop
+   - Used for creating wireframes for mobile, tablet and desktop
 1. [Canva](https://www.canva.com/)
    - Used for creating an [original design](https://www.canva.com/design/DAEMAKjwqWA/v1I9xqR00DFEtustp3z0tA/view?utm_content=DAEMAKjwqWA&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton) for SafeTree logo and primary font
 1. [SVG Optimizer](https://petercollingridge.appspot.com/svg-optimiser)
    - For minimizing SVG path to for use in HTML
 1. [cwebp](https://developers.google.com/speed/webp/docs/cwebp)
-   - For batch converting images to webp format using Linux terminal
+   - For batch converting images to .webp format using Linux terminal
 1. [ImageMagick](https://imagemagick.org/)
    - For batch resizing images using Linux terminal
 1. [AutoPrefixer](https://autoprefixer.github.io/)
-   - For improving CSS compatiability with older browsers
+   - For improving CSS compatibility with older browsers
+1. [Grammarly VSCode Extension](https://marketplace.visualstudio.com/items?itemName=znck.grammarly)
+   - For spelling & grammar checking README
 
 ---
 
 ## Testing
 
-Extensive testing took place to ensure that the page was fullt functional, accissible and responsive.
+Extensive testing took place to ensure that the page was fully functional, accessible and responsive.
 
 - Use of Chrome Dev Tools to test responsiveness on multiple devices, ranging from simulated Galaxy Fold (280px width) to a simulated 4K resolution (3840px width).
   - Following issues raised in terms of contrast, I altered the [color scheme to ensure full accessibility](https://github.com/cjcon90/safetree/tree/main/docs/colors)
-  - Ensured text remaied visible during webfont load with [font-display: swap](https://web.dev/font-display/?utm_source=lighthouse&utm_medium=devtools)
-- Tabbing through entire page to ensure that every link was accessible with use of tab and highlighted when focused
-- Testing every internal link on page to ensure that it works
-  - Logo link to top of page
+  - Ensured text remained visible during webfont load with [font-display: swap](https://web.dev/font-display/?utm_source=lighthouse&utm_medium=devtools)
+- Using the Tab key to navigate through the entire page to ensure that every link was accessible with the use of tab and highlighted when focused
+- Tested contact form validation by submitting invalid data
+- Testing every internal link on the page to ensure that it works (with mouse click and Tab)
+  - Logo link to the top of the page
   - Navbar links
-  - Image links to load full-size image
+  - Image links to load the full-size image
   - Contact form inputs
-  - mailto: links in contact section
+  - mailto: links in the contact section
   - footer links
-- Changing image selection in srcset to ensure that it was working at different resolutions
+- Changing image shown for different viewports in srcset to ensure that it was working at different resolutions
 - Testing markup on [W3C Markup Validation Service](https://validator.w3.org/)
 - Testing CSS on [Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/)
 - Testing page with Lighthouse in Chrome Dev Tools to optimise performance, accessibility, best practices and SEO
-  - Lighthouse highlighted performance issues with images not being resized properly, particularly in mobile, however when I made images smaller as suggested there was noticeable lack of definition, leading me to keep the larger sized images.
-	- Lighthouse Report (full report in repo docs/lighthouse folder):
-		- ![Lighthouse Report](https://res.cloudinary.com/cjcon90/image/upload/v1604853888/codeinstitute/safetree/lighthouse-report-8-11-20_jhb2jd.png)
-- Ran CSS through auto-prefixer and saved as separate .css file
-  - Linked HTML to prefixed .css file before pushing github. Kept original CSS file for future editing.
+  - Lighthouse highlighted performance issues with images not being resized properly, particularly in mobile, however when I made images smaller as suggested there was a noticeable lack of definition, leading me to keep the larger sized images.
+  - Lighthouse Report (full report in repo docs/lighthouse folder):
+    - ![Lighthouse Report](https://res.cloudinary.com/cjcon90/image/upload/v1604853888/codeinstitute/safetree/lighthouse-report-8-11-20_jhb2jd.png)
+- Ran CSS through auto-prefixer, and saved the result as a separate .css file
+  - Linked HTML to prefixed .css file before pushing to GitHub. Kept original CSS file for future editing.
 
 ---
 
@@ -218,7 +223,7 @@ Extensive testing took place to ensure that the page was fullt functional, accis
 
 **Bug:** Scrolling on mobile was laggy due to large gallery image sizes.
 
-**Fix:** Used _cwebp_ and _ImageMagick_ to create loops in bash terminal to optimise all images for website.
+**Fix:** Used _cwebp_ and _ImageMagick_ to create loops in bash terminal to optimise all images for the website.
 
 - Large resize loop:
   - `for f in * ; do convert $f -scale 30% lg/$f ; done`
@@ -231,7 +236,7 @@ Extensive testing took place to ensure that the page was fullt functional, accis
 
 ---
 
-**Bug:** If page was refreshed while user on #about, #gallery or #contact - the navbar animation would take up the whole screen despite not being at the top of the page.
+**Bug:** If the page was refreshed after a user had navigated to #about, #gallery or #contact internal links - the navbar animation would take up the whole screen despite not being at the top of the page.
 
 **Fix:** I altered the animation to make the navbar begin with absolute positioning and then switch to fixed once it had reduced to it's regular size.
 
@@ -250,6 +255,8 @@ Extensive testing took place to ensure that the page was fullt functional, accis
   }
 }
 ```
+
+---
 
 **Bug:** Input boxes moved position when adding a border to highlight when they were focused or active
 **Fix**: Added a transparent border to input boxes when not focused or active
@@ -283,16 +290,16 @@ Extensive testing took place to ensure that the page was fullt functional, accis
 
 ## Deployment
 
-The site is deployed on github pages. The setup involved was:
+The site is deployed on GitHub pages. The setup involved was:
 
-- Using Git, I pushed all my committed code to my respository at [https://github.com/cjcon90/safetree](https://github.com/cjcon90/safetree).
+- Using Git, I pushed all my committed code to my repository at [https://github.com/cjcon90/safetree](https://github.com/cjcon90/safetree).
 - Opened the settings tab in my project repository
 - Scrolled down to 'Github Pages' section
-- Selected 'main' branch and 'root' folder to deploy to github pages, and pressed 'Save'
+- Selected 'main' branch and 'root' folder to deploy to GitHub pages, and pressed 'Save'
 - Navigated to https://cjcon90.github.io/safetree/ to view deployed website
 - Github Pages deployment is automatically updated with every push
-- Project can be downloaded as a .zip file by clicking green 'Code' button in project repository and pressing 'Download ZIP'
-- Alternatively project can be cloned by entering `git clone git@github.com:cjcon90/safetree.git` in terminal.
+- Project can be downloaded as a .zip file by clicking the green 'Code' button in the project repository and pressing 'Download ZIP'
+- Alternatively project can be cloned by entering `git clone git@github.com:cjcon90/safetree.git` in the terminal.
 
 ## Credits & Resources
 
@@ -335,7 +342,7 @@ All photos were sourced from [Unsplash](https://unsplash.com/). Photo & Artist l
 
 ### Other Credits
 
-Wording for about/info sections was assisted by  [this research article on family enrichment adventure therapy](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7163833/)
+Wording for about/info sections was assisted by [this research article on family enrichment adventure therapy](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7163833/)
 
 My CI mentor for assisting in planning and preparing for milestone project.
 
