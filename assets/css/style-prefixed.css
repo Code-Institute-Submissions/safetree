@@ -1983,6 +1983,9 @@ option[value=""][disabled] {
   -ms-grid-rows: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   place-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   color: var(--color-secondary);
   word-break: break-all;
 }
@@ -2447,12 +2450,6 @@ footer {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     -ms-grid-rows: 1fr;
     grid-template-rows: 1fr;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: start;
     color: var(--color-secondary);
     word-break: break-all;
   }

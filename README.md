@@ -352,12 +352,9 @@ All photos were sourced from [Unsplash](https://unsplash.com/). Photo & Artist l
 
 ### Other Credits
 
-Wording for about/info sections was assisted by [this research article on family enrichment adventure therapy](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7163833/)
-
-My CI mentor for assisting in planning and preparing for milestone project.
-
-Anna Greaves & Jim Morel for their respective webinars regarding writing a README and completing Milestone Project 1
-
-CodeInstitute lessons on user centric front-end development
-
-Jonas Schmedtmann for his advanced CSS course on Udemy, which I completed in [September 2020](https://res.cloudinary.com/cjcon90/image/upload/v1604854568/certs/2020.09.09_udemy_advanced_css_uw7ywc.jpg)
+- Wording for about/info sections was assisted by [this research article on family enrichment adventure therapy](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7163833/)
+- My CI mentor for assisting in planning and preparing for milestone project.
+- Anna Greaves & Jim Morel for their respective webinars regarding writing a README and completing Milestone Project 1
+- CodeInstitute lessons on user centric front-end development
+- Codeinstitute Slack channel for peer code review
+- Jonas Schmedtmann for his advanced CSS course on Udemy, which I completed in [September 2020](https://res.cloudinary.com/cjcon90/image/upload/v1604854568/certs/2020.09.09_udemy_advanced_css_uw7ywc.jpg)
