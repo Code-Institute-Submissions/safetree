@@ -2256,7 +2256,7 @@ footer {
 
 /* ======= LANDSCAPE STYLING ======= */
 
-@media only screen and (orientation: landscape) {
+@media only screen and (min-aspect-ratio: 1/1) {
   section {
     width: 90%;
     max-width: 75rem;
