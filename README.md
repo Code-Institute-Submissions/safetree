@@ -264,11 +264,13 @@ Extensive testing took place to ensure that the page was fully functional, acces
 ---
 
 **Bug:** Input boxes moved position when adding a border to highlight when they were focused or active
+
 **Fix**: Added a transparent border to input boxes when not focused or active
 
 ---
 
-**Bug:** Fixed navbar was going underneath title text when scrolling/
+**Bug:** Navbar was going underneath title text when scrolling.
+
 **Fix:** Made navbar `z-index: 100` and then added `z-index` change to title text during animation:
 
 ```css
@@ -296,17 +298,21 @@ Extensive testing took place to ensure that the page was fully functional, acces
 ---
 
 **Bug:** when using contact form inputs on mobile, styling would switch to landscape orientation when inputting data
+
 **Fix:** Following advice on [this StackOverflow post](https://stackoverflow.com/a/32421098), adding `min-device-aspect-ratio` alongside the pre-existing `orientation:landscape` media query rule fixed issue and prevented keyboard from altering styles
 
 ---
 
 **Bug:** Users in the Slack #peer-code-review channel who were using Safari said no images were displaying on the website. It appeared to be a compatibility issue with .webp images
+
 **Fix:** On examination, my resized .jpg files were actually *smaller* than the .webp files, and (despite the Lighthouse warnings that I should serve images in next-gen format) were resulting in a *quicker* largest contentful paint time. Thus, rather than impelment .jpg files as a fallback, I replaced all .webp files with their .jpg counterparts. 
 
 ---
 
 ### Known Bugs
+
 **Bug:** As the header hero image is sized using 100vh, it can visibly change size on mobile device when scrolling downwards through page as the address bar in the mobile browser disappears (thus changing the viewport height)
+
 **Future Fix:** Possible  fix can be implemented with JavaScript, using `window.innerHeight` to size the image instead of vh, [as per this article by GitHub user **chanind**](https://chanind.github.io/javascript/2019/09/28/avoid-100vh-on-mobile-web.html) 
 
 ## Deployment
