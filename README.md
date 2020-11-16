@@ -193,6 +193,8 @@ The navbar animation is likened to the 'opening of a book' to create a more imme
    - For improving CSS compatibility with older browsers
 1. [Grammarly VSCode Extension](https://marketplace.visualstudio.com/items?itemName=znck.grammarly)
    - For spelling & grammar checking README
+- [Regex101](https://regex101.com/)
+	- For testing my telephone input pattern
 
 ---
 
@@ -221,6 +223,7 @@ Extensive testing took place to ensure that the page was fully functional, acces
     - ![Lighthouse Report](https://res.cloudinary.com/cjcon90/image/upload/v1604853888/codeinstitute/safetree/lighthouse-report-8-11-20_jhb2jd.png)
 - Ran CSS through auto-prefixer, and saved the result as a separate .css file
   - Linked HTML to prefixed .css file before pushing to GitHub. Kept original CSS file for future editing.
+- I tested my contact form validation on both dektop and mobile, and used [regex101](https://regex101.com) to test my telephone input pattern with Irish numbers (accounting for inputs such as: 0871234567 || 087-1234567 || 087 1234567)
 
 ---
 
@@ -333,9 +336,10 @@ The site is deployed on GitHub pages. The setup involved was:
 - Using `padding-top` and `margin-top` to offset navbar for internal links found in [this CSS Tricks article](https://css-tricks.com/hash-tag-links-padding/)
 - Creating a loop in bash terminal to batch resize images found in [this opensource.com post](https://opensource.com/article/19/6/how-write-loop-bash#:~:text=The%20syntax%20to%20loop%20through,the%20*%20wildcard%20matches%20everything)
 - Using cwebp to convert images to .webp format found in [this Tecmint post](https://www.tecmint.com/convert-images-to-webp-format-in-linux/)
-- CSS Grid Gallery section & setting `html {font-size:62.5%}` and using `rem` units for responsive sizing oth inspired by [Jonas Schmedtmann's CSS course on Udemy](https://www.udemy.com/course/advanced-css-and-sass/)
+- CSS Grid Gallery section & setting `html {font-size:62.5%}` and using `rem` units for responsive sizing both inspired by [Jonas Schmedtmann's CSS course on Udemy](https://www.udemy.com/course/advanced-css-and-sass/)
 - Updating site metadata following [Open Graph Protocol](https://ogp.me/) guide.
 - Added custom scrollbar following [w3schools guide.](https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp)
+- Creating a `tel` input pattern validatation, following [this StackOverflow post](https://stackoverflow.com/a/42479641), which I modified to suit Irish phone numbers.
 
 ### Photos
 

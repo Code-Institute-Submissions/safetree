@@ -480,6 +480,7 @@ header {
   flex-direction: column;
 }
 
+/* credit for placeholder text in select fields = https://stackoverflow.com/questions/5805059/how-do-i-make-a-placeholder-for-a-select-box/5859221#5859221 */
 option[value=""][disabled] {
   display: none;
 }
@@ -525,6 +526,7 @@ option[value=""][disabled] {
   align-items: start;
   color: var(--color-secondary);
   word-break: break-all;
+  margin: 0 -1rem;
 }
 
 .contact-area {
@@ -547,7 +549,7 @@ option[value=""][disabled] {
 }
 
 .contact-text svg {
-  transform: translateY(0.5rem);
+  margin-right: 0.2rem;
 }
 
 .contact-text p {

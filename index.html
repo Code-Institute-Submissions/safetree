@@ -186,7 +186,7 @@
                 <label for="email" class="form-label">Email:</label> <input type="email" class="form-input" placeholder="Email address" id="email" required />
               </div>
               <div class="formgroup">
-                <label for="phone" class="form-label">Phone:</label> <input type="text" class="form-input" placeholder="Phone Number" id="phone" required />
+                <label for="phone" class="form-label">Phone:</label> <input type="tel" class="form-input" placeholder="Phone Number" pattern="\d[ \d-]{8,10}\d" id="phone" required />
               </div>
               <div class="formgroup">
                 <label for="region" class="form-label">Region:</label>
@@ -200,9 +200,9 @@
               </div>
               <div class="formgroup" id="messagegroup">
                 <label for="message" class="form-label">Message:</label>
-                <textarea name="message" id="message" class="form-input" cols="30" rows="7" placeholder="What can we help you with?"></textarea>
+                <textarea id="message" class="form-input" cols="30" rows="7" placeholder="What can we help you with?" required></textarea>
               </div>
-              <button id="form-submit">Submit</button>
+              <button id="form-submit" type="submit">Submit</button>
             </form>
           </div>
           <div class="contact-section">
