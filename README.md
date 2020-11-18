@@ -37,30 +37,30 @@ We are specialised in trauma-informed care, and we create family-focused and goa
 
 ## User Stories
 
-### As a visitor who is either a parent or is a professional that works with vulnerable children, and is looking for a service to meet the specific needs of their child/client
+- **As a visitor who is either a parent or is a professional that works with vulnerable children, and is looking for a service to meet the specific needs of their child/client**
 
-- I want to easily be able to navigate the site and be able to quickly find the information I need
-- I want to get an explanation of the type of work completed by the service and the methodology behind it
-- I want to know the type of environments that the service takes place in
-- I want to know if the service is available in my area
-- I want to be able to easily make contact with the service and discuss a referral
-- I want to be able to easily find the service's social links in order to keep up to date with any additional news or see user reviews/feedback'
+  - I want to easily be able to navigate the site and be able to quickly find the information I need
+  - I want to get an explanation of the type of work completed by the service and the methodology behind it
+  - I want to know the type of environments that the service takes place in
+  - I want to know if the service is available in my area
+  - I want to be able to easily make contact with the service and discuss a referral
+  - I want to be able to easily find the service's social links in order to keep up to date with any additional news or see user reviews/feedback'
 
-### As a visitor who is a parent/family member/child that has been offered this service by a professional that they work with
+- **As a visitor who is a parent/family member/child that has been offered this service by a professional that they work with**
 
-- I want to be able to easily navigate the website
-- I want to see that the experience will be fun and enjoyable
-- I want to get see the environments that we would be exploring
-- I want to know what activities we would be doing
-- I want to know if the work is one on one or if the whole family is involved
-- As a parent, I want to know that the service are professional workers and that my child is safe
-- I want to easily make direct contact with the service for any additional questions I have
+  - I want to be able to easily navigate the website
+  - I want to see that the experience will be fun and enjoyable
+  - I want to get see the environments that we would be exploring
+  - I want to know what activities we would be doing
+  - I want to know if the work is one on one or if the whole family is involved
+  - As a parent, I want to know that the service are professional workers and that my child is safe
+  - I want to easily make direct contact with the service for any additional questions I have
 
-### As a visitor that has already visited the website and is returning to reference some information
+- **As a visitor that has already visited the website and is returning to reference some information**
 
-- I want to be able to immediately access the necessary part of the page to get the information I need
-- I want internal links to bring me to the correct part of the page, that is organised clearly with sufficient headings
-- I want to information to be legible and clear whether I am on desktop or whether I am accessing on the go from my mobile
+  - I want to be able to immediately access the necessary part of the page to get the information I need
+  - I want internal links to bring me to the correct part of the page, that is organised clearly with sufficient headings
+  - I want to information to be legible and clear whether I am on desktop or whether I am accessing on the go from my mobile
 
 ---
 
@@ -219,7 +219,7 @@ Extensive testing took place on both desktop and mobile to ensure that the page 
 
 ### Functionality
 
-##### Navbar
+#### Navbar
 
 - When the logo in the navbar is clicked it brings the user to the top of the page
 - Each of the internal links bring the user to the correct section of the page
@@ -257,12 +257,12 @@ Extensive testing took place on both desktop and mobile to ensure that the page 
 ### General Testing
 
 - Use of Chrome Dev Tools to test responsiveness on multiple devices, ranging from simulated Galaxy Fold (280vw) to a simulated 4K resolution (3840vw).
-- Following issues raised in terms of text-contrast, I altered the [color scheme to ensure full accessibility](https://github.com/cjcon90/safetree/tree/main/docs/colors)
 - Ensured text remained visible during webfont load with [font-display: swap](https://web.dev/font-display/?utm_source=lighthouse&utm_medium=devtools)
 - Testing markup on [W3C Markup Validation Service](https://validator.w3.org/)
 - Testing CSS on [Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/)
 - Testing page with Lighthouse in Chrome Dev Tools to optimise performance, accessibility, best practices and SEO
   - Lighthouse highlighted performance issues with images not being resized properly, particularly in mobile, however when I made images smaller as suggested there was a noticeable lack of definition, leading me to choose some minor errors rather than compromise page appearance.
+  - Lighthouse highlighted that some text was not meeting accessability standards in terms of contrast with background, so I altered the [color scheme to ensure full accessibility](https://github.com/cjcon90/safetree/tree/main/docs/colors)
   - Lighthouse Report (full report in repo docs/lighthouse folder):
     - ![Lighthouse Report](https://res.cloudinary.com/cjcon90/image/upload/v1604853888/codeinstitute/safetree/lighthouse-report-8-11-20_jhb2jd.png)
 - Ran CSS through auto-prefixer, and saved the result as a separate .css file
@@ -352,7 +352,7 @@ Extensive testing took place on both desktop and mobile to ensure that the page 
 
 **Bug:** Users in the Slack #peer-code-review channel who were using Safari said no images were displaying on the website. It appeared to be a compatibility issue with .webp images
 
-**Fix:** On examination, my resized .jpg files were actually _smaller_ than the .webp files, and (despite the Lighthouse warnings that I should serve images in next-gen format) were resulting in a _quicker_ largest contentful paint time. Thus, rather than impelment .jpg files as a fallback, I replaced all .webp files with their .jpg counterparts. I followed [this guide](https://help.nexcess.net/74176-mysql-database-management/how-to-optimize-jpegs-pngs-and-gifs-from-the-cli) to use jpegoptim to optimise my jpg images.
+**Fix:** On examination, my resized .jpg files were actually _smaller_ than the .webp files, and (despite the Lighthouse warnings that I should serve images in next-gen format) were resulting in a _quicker_ largest contentful paint time. Thus, rather than impelment .jpg files as a fallback, I replaced all .webp files with their .jpg counterparts. I also used jpegoptim to compress and optimise all images in the site using [this guide](https://help.nexcess.net/74176-mysql-database-management/how-to-optimize-jpegs-pngs-and-gifs-from-the-cli) to increase page performance even further.
 
 ---
 
