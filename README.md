@@ -1,7 +1,5 @@
 # SafeTree Adventure Therapy
 
-
-
 ![Am I responsive Screenshot](https://res.cloudinary.com/cjcon90/image/upload/v1604867939/codeinstitute/safetree/am-i-responsive-screenshot_jlioii.png)
 
 The purpose of this website is to promote an organisation that offers alternative therapy for vulnerable young people through the use of outdoor activities in nature.
@@ -23,7 +21,7 @@ A link to the live website is [HERE](https://cjcon90.github.io/safetree/)
 - Technologies Used
 - Testing
 - Bugs & Fixes
-	- Known Bugs 
+  - Known Bugs
 - Deployment
 - Credits & Resources
 
@@ -193,8 +191,9 @@ The navbar animation is likened to the 'opening of a book' to create a more imme
    - For improving CSS compatibility with older browsers
 1. [Grammarly VSCode Extension](https://marketplace.visualstudio.com/items?itemName=znck.grammarly)
    - For spelling & grammar checking README
+
 - [Regex101](https://regex101.com/)
-	- For testing my telephone input pattern
+  - For testing my telephone input pattern
 
 ---
 
@@ -308,7 +307,7 @@ Extensive testing took place to ensure that the page was fully functional, acces
 
 **Bug:** Users in the Slack #peer-code-review channel who were using Safari said no images were displaying on the website. It appeared to be a compatibility issue with .webp images
 
-**Fix:** On examination, my resized .jpg files were actually *smaller* than the .webp files, and (despite the Lighthouse warnings that I should serve images in next-gen format) were resulting in a *quicker* largest contentful paint time. Thus, rather than impelment .jpg files as a fallback, I replaced all .webp files with their .jpg counterparts. 
+**Fix:** On examination, my resized .jpg files were actually _smaller_ than the .webp files, and (despite the Lighthouse warnings that I should serve images in next-gen format) were resulting in a _quicker_ largest contentful paint time. Thus, rather than impelment .jpg files as a fallback, I replaced all .webp files with their .jpg counterparts.
 
 ---
 
@@ -316,7 +315,7 @@ Extensive testing took place to ensure that the page was fully functional, acces
 
 **Bug:** As the header hero image is sized using 100vh, it can visibly change size on mobile device when scrolling downwards through page as the address bar in the mobile browser disappears (thus changing the viewport height)
 
-**Future Fix:** Possible  fix can be implemented with JavaScript, using `window.innerHeight` to size the image instead of vh, [as per this article by GitHub user **chanind**](https://chanind.github.io/javascript/2019/09/28/avoid-100vh-on-mobile-web.html) 
+**Future Fix:** Possible fix can be implemented with JavaScript, using `window.innerHeight` to size the image instead of vh, [as per this article by GitHub user **chanind**](https://chanind.github.io/javascript/2019/09/28/avoid-100vh-on-mobile-web.html)
 
 ## Deployment
 
@@ -345,7 +344,7 @@ The site is deployed on GitHub pages. The setup involved was:
 - CSS Grid Gallery section & setting `html {font-size:62.5%}` and using `rem` units for responsive sizing both inspired by [Jonas Schmedtmann's CSS course on Udemy](https://www.udemy.com/course/advanced-css-and-sass/)
 - Updating site metadata following [Open Graph Protocol](https://ogp.me/) guide.
 - Added custom scrollbar following [w3schools guide.](https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp)
-- Creating a `tel` input pattern validatation, following [this StackOverflow post](https://stackoverflow.com/a/42479641), which I modified to suit Irish phone numbers.
+- Creating a `tel` input pattern validation, following [this StackOverflow post](https://stackoverflow.com/a/42479641), which I modified to suit Irish phone numbers.
 
 ### Photos
 
@@ -375,8 +374,8 @@ All photos were sourced from [Unsplash](https://unsplash.com/). Photo & Artist l
 ### Other Credits
 
 - Wording for about/info sections was assisted by [this research article on family enrichment adventure therapy](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7163833/)
-- My CI mentor for assisting in planning and preparing for milestone project.
+- My CI mentor for assisting in planning and preparing for milestone-project.
 - Anna Greaves & Jim Morel for their respective webinars regarding writing a README and completing Milestone Project 1
-- CodeInstitute lessons on user centric front-end development
+- CodeInstitute lessons on user-centric front-end development
 - Codeinstitute Slack channel for peer code review
 - Jonas Schmedtmann for his advanced CSS course on Udemy, which I completed in [September 2020](https://res.cloudinary.com/cjcon90/image/upload/v1604854568/certs/2020.09.09_udemy_advanced_css_uw7ywc.jpg)
