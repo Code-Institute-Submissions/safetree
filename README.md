@@ -80,12 +80,13 @@ Whilst the service is aimed at children, it is an organisation of skilled, profe
 - We want to clearly identify our skills as a service in meeting the needs of vulnerable young people.
 - The website should have a focus on visually highlighting the environments that adventure therapy takes place in, as this is a key and unique element of the service and is a primary factor that would entice customers to make contact.
 
-#### What are the needs of our users?
+#### How do we meet our users' needs?
 
-- Users searching for 'alternative therapy' or 'adventure therapy' need to find out how we can meet their needs.
-- Users will need to discuss their unique case with a representative from our team
-- Users will need to know where our service is in relation to them
-- Users will want a smooth browsing experience free of anything that will hinder their understanding of our service
+- We should have good SEO, so that users searching for 'alternative therapy' or 'adventure therapy' will be able to find our page and read about our service.
+- We should make it easy for users to contact us directly and through various means so they can discuss their unique case with us in a format that is most comfortable for them
+- We should clearly outline our locations so that users know where our service is in relation to them and where we operate
+- We should provide visual aids so that users can get a sense of what adventure therapy entails and the type of environments where it takes place
+- We should provide a smooth and uncluttered browsing experience, that is clearly signposted and free of anything that will hinder the users' understanding of our service or ability to make contact.
 
 #### Special Considerations
 
