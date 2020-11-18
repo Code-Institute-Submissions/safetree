@@ -37,17 +37,30 @@ We are specialised in trauma-informed care, and we create family-focused and goa
 
 ## User Stories
 
-### Story 1
+### As a visitor who is either a parent or is a professional that works with vulnerable children, and is looking for a service to meet the specific needs of their child/client
 
-> "_I am a psychologist working with a high-risk young person who's parents are struggling to care for his needs. He is refusing traditional therapeutic intervention. I want to source a service that will provide benefits for him and his family._""
+- I want to easily be able to navigate the site and be able to quickly find the information I need
+- I want to get an explanation of the type of work completed by the service and the methodology behind it
+- I want to know the type of environments that the service takes place in
+- I want to know if the service is available in my area
+- I want to be able to easily make contact with the service and discuss a referral
+- I want to be able to easily find the service's social links in order to keep up to date with any additional news or see user reviews/feedback'
 
-### Story 2
+### As a visitor who is a parent/family member/child that has been offered this service by a professional that they work with
 
-> "_I am a social worker. I want to find a service for a young person in care to try and improve and maintain their foster placement. The young person has sensory difficulties and I am hoping to apply for funding to a service that can support them in a peaceful, nature-based environment._"
+- I want to be able to easily navigate the website
+- I want to see that the experience will be fun and enjoyable
+- I want to get see the environments that we would be exploring
+- I want to know what activities we would be doing
+- I want to know if the work is one on one or if the whole family is involved
+- As a parent, I want to know that the service are professional workers and that my child is safe
+- I want to easily make direct contact with the service for any additional questions I have
 
-### Story 3
+### As a visitor that has already visited the website and is returning to reference some information
 
-> "_I am a parent and I am worried about the recent behavioural changes in my child. I do not want to bring them to a doctor or therapist but want to find something that can help us as a family manage this disruptive behaviour and bring us closer together._"
+- I want to be able to immediately access the necessary part of the page to get the information I need
+- I want internal links to bring me to the correct part of the page, that is organised clearly with sufficient headings
+- I want to information to be legible and clear whether I am on desktop or whether I am accessing on the go from my mobile
 
 ---
 
@@ -111,9 +124,9 @@ The website should split into three areas. Considering the purpose of the websit
 
 ### 4. Skeleton
 
-- [Mobile Wireframe](https://wireframe.cc/pro/pp/9b32089f7389693#4eskckkd)
-- [Tablet Wireframe](https://wireframe.cc/pro/pp/9b32089f7389693#s1exq272)
-- [Desktop Wireframe](https://wireframe.cc/pro/pp/9b32089f7389693#pvh1r37l)
+- [Mobile Wireframe](https://github.com/cjcon90/safetree/blob/main/docs/wifreframes/1.%20Mobile.png)
+- [Tablet Wireframe](https://github.com/cjcon90/safetree/blob/main/docs/wifreframes/2.%20Tablet.png)
+- [Desktop Wireframe](https://github.com/cjcon90/safetree/blob/main/docs/wifreframes/3.%20Desktop.png)
 
 The website will be organised into the three sections above within a single scroll-able page.
 
@@ -185,44 +198,76 @@ The navbar animation is likened to the 'opening of a book' to create a more imme
    - For minimizing SVG path to for use in HTML
 1. [cwebp](https://developers.google.com/speed/webp/docs/cwebp)
    - For batch converting images to .webp format using Linux terminal
+1. [jpegoptim](https://www.mankier.com/1/jpegoptim)
+   - For compressing and optimising images using Linux terminal
 1. [ImageMagick](https://imagemagick.org/)
    - For batch resizing images using Linux terminal
 1. [AutoPrefixer](https://autoprefixer.github.io/)
    - For improving CSS compatibility with older browsers
 1. [Grammarly VSCode Extension](https://marketplace.visualstudio.com/items?itemName=znck.grammarly)
    - For spelling & grammar checking README
-
-- [Regex101](https://regex101.com/)
-  - For testing my telephone input pattern
+1. [Regex101](https://regex101.com/)
+   - For testing my telephone input pattern
+1. [Favicon Ico Generator](https://favicon.io/favicon-converter/)
+   - For creating favicon.ico from logo
 
 ---
 
 ## Testing
 
-Extensive testing took place to ensure that the page was fully functional, accessible and responsive.
+Extensive testing took place on both desktop and mobile to ensure that the page was fully functional, accessible and responsive.
 
-- Use of Chrome Dev Tools to test responsiveness on multiple devices, ranging from simulated Galaxy Fold (280px width) to a simulated 4K resolution (3840px width).
-  - Following issues raised in terms of contrast, I altered the [color scheme to ensure full accessibility](https://github.com/cjcon90/safetree/tree/main/docs/colors)
-  - Ensured text remained visible during webfont load with [font-display: swap](https://web.dev/font-display/?utm_source=lighthouse&utm_medium=devtools)
-- Using the Tab key to navigate through the entire page to ensure that every link was accessible with the use of tab and highlighted when focused
-- Tested contact form validation by submitting invalid data
-- Testing every internal link on the page to ensure that it works (with mouse click and Tab)
-  - Logo link to the top of the page
-  - Navbar links
-  - Image links to load the full-size image
-  - Contact form inputs
-  - mailto: links in the contact section
-  - footer links
-- Changing image shown for different viewports in srcset to ensure that it was working at different resolutions
+### Functionality
+
+##### Navbar
+
+- When the logo in the navbar is clicked it brings the user to the top of the page
+- Each of the internal links bring the user to the correct section of the page
+  - When an internal link is clicked, it brings users to the heading of each section - which is correctly offset to account for the fixed navbar
+- The navbar stays fixed at the top of the screen on both mobile and desktop
+- Each navbar link is highlighted when hovered over, active or when focused using Tab
+
+#### About Section
+
+- Text is legible and correctly aligned on both mobile and desktop
+- When the width of the viewport exceeds the height of the viewport, the about sections switch to rows rather than columns
+  - This was tested with both chrome dev tools and mobile device in landscape vs portrait
+
+#### Gallery Section
+
+- Each gallery item scales up and has a border when hovered over, active or when focused using Tab
+- When clicked, each picture brings the user to the correct, full-size corresponding image
+- The size of picture thumbnails loaded adjust for different viewport widths.
+  - This was tested by changing the specified image loaded at different viewports and adjusting vw with dev tools, to ensure that srcset is working as intended.
+
+#### Contact Section
+
+- Each input section is outlined when clicked in or when focused using Tab
+- Tested that form validation works on every section
+- Used [regex101](https://regex101.com) to test my telephone input pattern with Irish numbers (accounting for inputs such as: 0871234567 || 087-1234567 || 087 1234567)
+- Tested that submit button only works when all fields have been filled in with valid content
+- Tested that email links in the contact details section open up a `mailto:` link to correct email
+
+#### Footer Section
+
+- Each Tested that all links are outlined when hovered over, active or when focused using Tab.
+- Tested that each link corresponds to the correct destination
+- Tested that each link opens in a new tab
+
+### General Testing
+
+- Use of Chrome Dev Tools to test responsiveness on multiple devices, ranging from simulated Galaxy Fold (280vw) to a simulated 4K resolution (3840vw).
+- Following issues raised in terms of text-contrast, I altered the [color scheme to ensure full accessibility](https://github.com/cjcon90/safetree/tree/main/docs/colors)
+- Ensured text remained visible during webfont load with [font-display: swap](https://web.dev/font-display/?utm_source=lighthouse&utm_medium=devtools)
 - Testing markup on [W3C Markup Validation Service](https://validator.w3.org/)
 - Testing CSS on [Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/)
 - Testing page with Lighthouse in Chrome Dev Tools to optimise performance, accessibility, best practices and SEO
-  - Lighthouse highlighted performance issues with images not being resized properly, particularly in mobile, however when I made images smaller as suggested there was a noticeable lack of definition, leading me to keep the larger sized images.
+  - Lighthouse highlighted performance issues with images not being resized properly, particularly in mobile, however when I made images smaller as suggested there was a noticeable lack of definition, leading me to choose some minor errors rather than compromise page appearance.
   - Lighthouse Report (full report in repo docs/lighthouse folder):
     - ![Lighthouse Report](https://res.cloudinary.com/cjcon90/image/upload/v1604853888/codeinstitute/safetree/lighthouse-report-8-11-20_jhb2jd.png)
 - Ran CSS through auto-prefixer, and saved the result as a separate .css file
-  - Linked HTML to prefixed .css file before pushing to GitHub. Kept original CSS file for future editing.
-- I tested my contact form validation on both dektop and mobile, and used [regex101](https://regex101.com) to test my telephone input pattern with Irish numbers (accounting for inputs such as: 0871234567 || 087-1234567 || 087 1234567)
+  - Linked HTML to prefixed .css file before pushing to GitHub. Kept the original CSS file for future editing.
+- I tested my contact form validation on both desktop and mobile, and used [regex101](https://regex101.com) to test my telephone input pattern with Irish numbers (accounting for inputs such as: 0871234567 || 087-1234567 || 087 1234567)
 
 ---
 
@@ -307,7 +352,7 @@ Extensive testing took place to ensure that the page was fully functional, acces
 
 **Bug:** Users in the Slack #peer-code-review channel who were using Safari said no images were displaying on the website. It appeared to be a compatibility issue with .webp images
 
-**Fix:** On examination, my resized .jpg files were actually _smaller_ than the .webp files, and (despite the Lighthouse warnings that I should serve images in next-gen format) were resulting in a _quicker_ largest contentful paint time. Thus, rather than impelment .jpg files as a fallback, I replaced all .webp files with their .jpg counterparts.
+**Fix:** On examination, my resized .jpg files were actually _smaller_ than the .webp files, and (despite the Lighthouse warnings that I should serve images in next-gen format) were resulting in a _quicker_ largest contentful paint time. Thus, rather than impelment .jpg files as a fallback, I replaced all .webp files with their .jpg counterparts. I followed [this guide](https://help.nexcess.net/74176-mysql-database-management/how-to-optimize-jpegs-pngs-and-gifs-from-the-cli) to use jpegoptim to optimise my jpg images.
 
 ---
 
