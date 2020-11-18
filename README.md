@@ -261,6 +261,9 @@ Extensive testing took place on both desktop and mobile to ensure that the page 
 - Ensured text remained visible during webfont load with [font-display: swap](https://web.dev/font-display/?utm_source=lighthouse&utm_medium=devtools)
 - Testing markup on [W3C Markup Validation Service](https://validator.w3.org/)
 - Testing CSS on [Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+  - While there were errors produced in the CSS validation service (particularly in the prefixed CSS file) they were **<u>solely</u>** related to
+  	- A. vendor prefixes
+  	- B. that it could not validate an imported stylesheet (importing google fonts)
 - Testing page with Lighthouse in Chrome Dev Tools to optimise performance, accessibility, best practices and SEO
   - Lighthouse highlighted performance issues with images not being resized properly, particularly in mobile, however when I made images smaller as suggested there was a noticeable lack of definition, leading me to choose some minor errors rather than compromise page appearance.
   - Lighthouse highlighted that some text was not meeting accessability standards in terms of contrast with background, so I altered the [color scheme to ensure full accessibility](https://github.com/cjcon90/safetree/tree/main/docs/colors)
