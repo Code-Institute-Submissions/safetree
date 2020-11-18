@@ -10,22 +10,24 @@ A link to the live website is [HERE](https://cjcon90.github.io/safetree/)
 
 ## Table of Contents
 
-- Overview
-- User Stories
-- User Experience (UX)
-  - Strategy
-  - Scope
-  - Structure
-  - Skeleton
-  - Surface
-- Technologies Used
-- Testing
-- Bugs & Fixes
-  - Known Bugs
-- Deployment
-- Credits & Resources
+- [Overview](#Overview)
+- [User Stories](#Stories)
+- [User Experience (UX)](#UX)
+  - [Strategy](#Strategy)
+  - [Scope](#Scope)
+  - [Structure](#Structure)
+  - [Skeleton](#Skeleton)
+  - [Surface](#Surface)
+- [Technologies Used](#Technologies)
+- [Testing](#Testing)
+- [Bugs & Fixes](#Bugs)
+  - [Known Bugs](#Known)
+- [Deployment](#Deployment)
+- [Credits & Resources](#Credits)
 
 ---
+
+<a name="Overview"></a>
 
 ## Overview
 
@@ -35,6 +37,7 @@ We are specialised in trauma-informed care, and we create family-focused and goa
 
 ---
 
+<a name="Stories"></a>
 ## User Stories
 
 - **As a visitor who is either a parent or is a professional that works with vulnerable children, and is looking for a service to meet the specific needs of their child/client**
@@ -64,6 +67,7 @@ We are specialised in trauma-informed care, and we create family-focused and goa
 
 ---
 
+<a name="UX"></a>
 ## User Experience (UX)
 
 This website will be aimed primarily at professionals working with children or parents.
@@ -72,6 +76,7 @@ Whilst the service is aimed at children, it is an organisation of skilled, profe
 
 ---
 
+<a name="Strategy"></a>
 ### 1. Strategy
 
 #### Why do we want to build the project?
@@ -95,6 +100,7 @@ Whilst the service is aimed at children, it is an organisation of skilled, profe
 
 ---
 
+<a name="Scope"></a>
 ### 2. Scope
 
 Considering the strategy of our website and the users' needs as outlined, our website should:
@@ -109,6 +115,7 @@ Considering the strategy of our website and the users' needs as outlined, our we
 
 ---
 
+<a name="Structure"></a>
 ### 3. Structure
 
 The website should split into three areas. Considering the purpose of the website, these areas are of equal focus and priority.
@@ -123,6 +130,7 @@ The website should split into three areas. Considering the purpose of the websit
 
 ---
 
+<a name="Skeleton"></a>
 ### 4. Skeleton
 
 - [Mobile Wireframe](https://github.com/cjcon90/safetree/blob/main/docs/wifreframes/1.%20Mobile.png)
@@ -146,6 +154,7 @@ Following initial testing, I made two significant changes to the original wirefr
 
 ---
 
+<a name="Surface"></a>
 ### 5. Surface
 
 #### Fonts
@@ -174,6 +183,7 @@ The navbar animation is likened to the 'opening of a book' to create a more imme
 
 ---
 
+<a name="Technologies"></a>
 ## Technologies Used
 
 ### Languages
@@ -214,6 +224,7 @@ The navbar animation is likened to the 'opening of a book' to create a more imme
 
 ---
 
+<a name="Testing"></a>
 ## Testing
 
 Extensive testing took place on both desktop and mobile to ensure that the page was fully functional, accessible and responsive.
@@ -275,6 +286,7 @@ Extensive testing took place on both desktop and mobile to ensure that the page 
 
 ---
 
+<a name="Bugs"></a>
 ## Bugs & Fixes
 
 **Bug:** Scrolling on mobile was laggy due to large gallery image sizes.
@@ -360,12 +372,14 @@ Extensive testing took place on both desktop and mobile to ensure that the page 
 
 ---
 
+<a name="Known"></a>
 ### Known Bugs
 
 **Bug:** As the header hero image is sized using 100vh, it can visibly change size on mobile device when scrolling downwards through page as the address bar in the mobile browser disappears (thus changing the viewport height)
 
 **Future Fix:** Possible fix can be implemented with JavaScript, using `window.innerHeight` to size the image instead of vh, [as per this article by GitHub user **chanind**](https://chanind.github.io/javascript/2019/09/28/avoid-100vh-on-mobile-web.html)
 
+<a name="Deployment"></a>
 ## Deployment
 
 The site is deployed on GitHub pages. The setup involved was:
@@ -379,6 +393,7 @@ The site is deployed on GitHub pages. The setup involved was:
 - Project can be downloaded as a .zip file by clicking the green 'Code' button in the project repository and pressing 'Download ZIP'
 - Alternatively project can be cloned by entering `git clone git@github.com:cjcon90/safetree.git` in the terminal.
 
+<a name="Credits"></a>
 ## Credits & Resources
 
 ### Code
